@@ -14,4 +14,5 @@ export type Car = {
     description: string;
     tags: string[];
     image: string;
+    état: string;
 }
