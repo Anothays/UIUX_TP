@@ -1,0 +1,552 @@
+[
+  {
+    "username": "jdupont",
+    "firstname": "Jean",
+    "lastname": "Dupont",
+    "email": "jean.dupont@example.com",
+    "password": "$2b$10$rQ8K9LmNpOqRsTuVwXyZ3e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=1"
+    },
+    "phonenumber": "+33612345678"
+  },
+  {
+    "username": "marie.martin",
+    "firstname": "Marie",
+    "lastname": "Martin",
+    "email": "marie.martin@example.com",
+    "password": "$2b$10$sR9L0MnQpPrStVxYzA4f3e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=2"
+    },
+    "phonenumber": "+33623456789"
+  },
+  {
+    "username": "pierre.bernard",
+    "firstname": "Pierre",
+    "lastname": "Bernard",
+    "email": "pierre.bernard@example.com",
+    "password": "$2b$10$tS0M1NoRqQsTuWyZaB5g4e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=3"
+    },
+    "phonenumber": "+33634567890"
+  },
+  {
+    "username": "sophie.dubois",
+    "firstname": "Sophie",
+    "lastname": "Dubois",
+    "email": "sophie.dubois@example.com",
+    "password": "$2b$10$uT1N2OpSrRtVxZbBc6h5e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=4"
+    },
+    "phonenumber": "+33645678901"
+  },
+  {
+    "username": "lucas.leroy",
+    "firstname": "Lucas",
+    "lastname": "Leroy",
+    "email": "lucas.leroy@example.com",
+    "password": "$2b$10$vU2O3PqTsSuWyZcCd7i6e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=5"
+    },
+    "phonenumber": "+33656789012"
+  },
+  {
+    "username": "emma.moreau",
+    "firstname": "Emma",
+    "lastname": "Moreau",
+    "email": "emma.moreau@example.com",
+    "password": "$2b$10$wV3P4QrUtTvXZdDe8j7e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=6"
+    },
+    "phonenumber": "+33667890123"
+  },
+  {
+    "username": "thomas.petit",
+    "firstname": "Thomas",
+    "lastname": "Petit",
+    "email": "thomas.petit@example.com",
+    "password": "$2b$10$xW4Q5RsVuUwYaeEf9k8e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=7"
+    },
+    "phonenumber": "+33678901234"
+  },
+  {
+    "username": "laura.robert",
+    "firstname": "Laura",
+    "lastname": "Robert",
+    "email": "laura.robert@example.com",
+    "password": "$2b$10$yX5R6StWvVxZbfFg0l9e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=8"
+    },
+    "phonenumber": "+33689012345"
+  },
+  {
+    "username": "hugo.richard",
+    "firstname": "Hugo",
+    "lastname": "Richard",
+    "email": "hugo.richard@example.com",
+    "password": "$2b$10$zY6S7TuXwWyZcgGh1m0e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=9"
+    },
+    "phonenumber": "+33690123456"
+  },
+  {
+    "username": "chloe.durand",
+    "firstname": "Chloé",
+    "lastname": "Durand",
+    "email": "chloe.durand@example.com",
+    "password": "$2b$10$aZ7T8UvXxXzadhHi2n1e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=10"
+    },
+    "phonenumber": "+33701234567"
+  },
+  {
+    "username": "alexandre.simon",
+    "firstname": "Alexandre",
+    "lastname": "Simon",
+    "email": "alexandre.simon@example.com",
+    "password": "$2b$10$bA8U9VwYyYabdiIj3o2e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=11"
+    },
+    "phonenumber": "+33712345678"
+  },
+  {
+    "username": "lea.michel",
+    "firstname": "Léa",
+    "lastname": "Michel",
+    "email": "lea.michel@example.com",
+    "password": "$2b$10$cB9V0WxZzZbcejJk4p3e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=12"
+    },
+    "phonenumber": "+33723456789"
+  },
+  {
+    "username": "antoine.garcia",
+    "firstname": "Antoine",
+    "lastname": "Garcia",
+    "email": "antoine.garcia@example.com",
+    "password": "$2b$10$dC0W1XyAaAcdkKl5q4e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=13"
+    },
+    "phonenumber": "+33734567890"
+  },
+  {
+    "username": "camille.david",
+    "firstname": "Camille",
+    "lastname": "David",
+    "email": "camille.david@example.com",
+    "password": "$2b$10$eD1X2YzBbBdelLm6r5e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=14"
+    },
+    "phonenumber": "+33745678901"
+  },
+  {
+    "username": "maxime.bertrand",
+    "firstname": "Maxime",
+    "lastname": "Bertrand",
+    "email": "maxime.bertrand@example.com",
+    "password": "$2b$10$fE2Y3ZaCcCefmNn7s6e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=15"
+    },
+    "phonenumber": "+33756789012"
+  },
+  {
+    "username": "julie.roux",
+    "firstname": "Julie",
+    "lastname": "Roux",
+    "email": "julie.roux@example.com",
+    "password": "$2b$10$gF3Z4AbDdDfgoOo8t7e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=16"
+    },
+    "phonenumber": "+33767890123"
+  },
+  {
+    "username": "nicolas.vincent",
+    "firstname": "Nicolas",
+    "lastname": "Vincent",
+    "email": "nicolas.vincent@example.com",
+    "password": "$2b$10$hG4A5BcEeEghpPp9u8e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=17"
+    },
+    "phonenumber": "+33778901234"
+  },
+  {
+    "username": "manon.fournier",
+    "firstname": "Manon",
+    "lastname": "Fournier",
+    "email": "manon.fournier@example.com",
+    "password": "$2b$10$iH5B6CdFfFhiqQq0v9e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=18"
+    },
+    "phonenumber": "+33789012345"
+  },
+  {
+    "username": "quentin.morel",
+    "firstname": "Quentin",
+    "lastname": "Morel",
+    "email": "quentin.morel@example.com",
+    "password": "$2b$10$jI6C7DeGgGijrRr1w0e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=19"
+    },
+    "phonenumber": "+33790123456"
+  },
+  {
+    "username": "lucie.girard",
+    "firstname": "Lucie",
+    "lastname": "Girard",
+    "email": "lucie.girard@example.com",
+    "password": "$2b$10$kJ7D8EfHhHjksSs2x1e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=20"
+    },
+    "phonenumber": "+33801234567"
+  },
+  {
+    "username": "romain.andre",
+    "firstname": "Romain",
+    "lastname": "André",
+    "email": "romain.andre@example.com",
+    "password": "$2b$10$lK8E9FgIiIklTtTt3y2e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=21"
+    },
+    "phonenumber": "+33812345678"
+  },
+  {
+    "username": "elise.lefebvre",
+    "firstname": "Élise",
+    "lastname": "Lefebvre",
+    "email": "elise.lefebvre@example.com",
+    "password": "$2b$10$mL9F0GhJjJlmUuUu4z3e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=22"
+    },
+    "phonenumber": "+33823456789"
+  },
+  {
+    "username": "florian.mercier",
+    "firstname": "Florian",
+    "lastname": "Mercier",
+    "email": "florian.mercier@example.com",
+    "password": "$2b$10$nM0G1HiKkKmnVvVv5a4e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=23"
+    },
+    "phonenumber": "+33834567890"
+  },
+  {
+    "username": "oceane.dupuy",
+    "firstname": "Océane",
+    "lastname": "Dupuy",
+    "email": "oceane.dupuy@example.com",
+    "password": "$2b$10$oN1H2IjLlLnoWwWw6b5e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=24"
+    },
+    "phonenumber": "+33845678901"
+  },
+  {
+    "username": "clement.lambert",
+    "firstname": "Clément",
+    "lastname": "Lambert",
+    "email": "clement.lambert@example.com",
+    "password": "$2b$10$pO2I3JkMmMopXxXx7c6e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=25"
+    },
+    "phonenumber": "+33856789012"
+  },
+  {
+    "username": "ines.bonnet",
+    "firstname": "Inès",
+    "lastname": "Bonnet",
+    "email": "ines.bonnet@example.com",
+    "password": "$2b$10$qP3J4KlNnNpqYyYy8d7e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=26"
+    },
+    "phonenumber": "+33867890123"
+  },
+  {
+    "username": "adrien.francois",
+    "firstname": "Adrien",
+    "lastname": "François",
+    "email": "adrien.francois@example.com",
+    "password": "$2b$10$rQ4K5LmOoOqrZzZz9e8e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=27"
+    },
+    "phonenumber": "+33878901234"
+  },
+  {
+    "username": "maeva.martinez",
+    "firstname": "Maëva",
+    "lastname": "Martinez",
+    "email": "maeva.martinez@example.com",
+    "password": "$2b$10$sR5L6MnPpPpsAaAa0f9e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=28"
+    },
+    "phonenumber": "+33889012345"
+  },
+  {
+    "username": "paul.legrand",
+    "firstname": "Paul",
+    "lastname": "Legrand",
+    "email": "paul.legrand@example.com",
+    "password": "$2b$10$tS6M7NoQqQqtBbBb1g0e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=29"
+    },
+    "phonenumber": "+33890123456"
+  },
+  {
+    "username": "lina.garnier",
+    "firstname": "Lina",
+    "lastname": "Garnier",
+    "email": "lina.garnier@example.com",
+    "password": "$2b$10$uT7N8OpRrRruCcCc2h1e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=30"
+    },
+    "phonenumber": "+33901234567"
+  },
+  {
+    "username": "valentin.faure",
+    "firstname": "Valentin",
+    "lastname": "Faure",
+    "email": "valentin.faure@example.com",
+    "password": "$2b$10$vU8O9PqSsSsvDdDd3i2e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=31"
+    },
+    "phonenumber": "+33912345678"
+  },
+  {
+    "username": "noemie.roussel",
+    "firstname": "Noémie",
+    "lastname": "Roussel",
+    "email": "noemie.roussel@example.com",
+    "password": "$2b$10$wV9P0QrTtTtwEeEe4j3e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=32"
+    },
+    "phonenumber": "+33923456789"
+  },
+  {
+    "username": "enzo.colin",
+    "firstname": "Enzo",
+    "lastname": "Colin",
+    "email": "enzo.colin@example.com",
+    "password": "$2b$10$xW0Q1RsUuUuxFfFf5k4e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=33"
+    },
+    "phonenumber": "+33934567890"
+  },
+  {
+    "username": "eva.vidal",
+    "firstname": "Eva",
+    "lastname": "Vidal",
+    "email": "eva.vidal@example.com",
+    "password": "$2b$10$yX1R2StVvVvyGgGg6l5e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=34"
+    },
+    "phonenumber": "+33945678901"
+  },
+  {
+    "username": "mathis.caron",
+    "firstname": "Mathis",
+    "lastname": "Caron",
+    "email": "mathis.caron@example.com",
+    "password": "$2b$10$zY2S3TuWwWwzHhHh7m6e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=35"
+    },
+    "phonenumber": "+33956789012"
+  },
+  {
+    "username": "lola.henry",
+    "firstname": "Lola",
+    "lastname": "Henry",
+    "email": "lola.henry@example.com",
+    "password": "$2b$10$aZ3T4UvXxXxaIiIi8n7e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=36"
+    },
+    "phonenumber": "+33967890123"
+  },
+  {
+    "username": "louis.gauthier",
+    "firstname": "Louis",
+    "lastname": "Gauthier",
+    "email": "louis.gauthier@example.com",
+    "password": "$2b$10$bA4U5VwYyYybJjJj9o8e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=37"
+    },
+    "phonenumber": "+33978901234"
+  },
+  {
+    "username": "zoey.masson",
+    "firstname": "Zoey",
+    "lastname": "Masson",
+    "email": "zoey.masson@example.com",
+    "password": "$2b$10$cB5V6WxZzZzcKkKk0p9e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=38"
+    },
+    "phonenumber": "+33989012345"
+  },
+  {
+    "username": "arthur.marchand",
+    "firstname": "Arthur",
+    "lastname": "Marchand",
+    "email": "arthur.marchand@example.com",
+    "password": "$2b$10$dC6W7XyAaAadLlLl1q0e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=39"
+    },
+    "phonenumber": "+33990123456"
+  },
+  {
+    "username": "jade.duval",
+    "firstname": "Jade",
+    "lastname": "Duval",
+    "email": "jade.duval@example.com",
+    "password": "$2b$10$eD7X8YzBbBbeMmMm2r1e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=40"
+    },
+    "phonenumber": "+33001234567"
+  },
+  {
+    "username": "gabriel.denis",
+    "firstname": "Gabriel",
+    "lastname": "Denis",
+    "email": "gabriel.denis@example.com",
+    "password": "$2b$10$fE8Y9ZaCcCcfNnNn3s2e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=41"
+    },
+    "phonenumber": "+33012345678"
+  },
+  {
+    "username": "lena.pascal",
+    "firstname": "Lena",
+    "lastname": "Pascal",
+    "email": "lena.pascal@example.com",
+    "password": "$2b$10$gF9Z0AbDdDdgOoOo4t3e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=42"
+    },
+    "phonenumber": "+33023456789"
+  },
+  {
+    "username": "nathan.brunet",
+    "firstname": "Nathan",
+    "lastname": "Brunet",
+    "email": "nathan.brunet@example.com",
+    "password": "$2b$10$hG0A1BcEeEehpPpPp5u4e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=43"
+    },
+    "phonenumber": "+33034567890"
+  },
+  {
+    "username": "maya.dumont",
+    "firstname": "Maya",
+    "lastname": "Dumont",
+    "email": "maya.dumont@example.com",
+    "password": "$2b$10$iH1B2CdFfFfiqQqQq6v5e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=44"
+    },
+    "phonenumber": "+33045678901"
+  },
+  {
+    "username": "raphael.roy",
+    "firstname": "Raphaël",
+    "lastname": "Roy",
+    "email": "raphael.roy@example.com",
+    "password": "$2b$10$jI2C3DeGgGgjrRrRr7w6e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=45"
+    },
+    "phonenumber": "+33056789012"
+  },
+  {
+    "username": "louna.noel",
+    "firstname": "Louna",
+    "lastname": "Noël",
+    "email": "louna.noel@example.com",
+    "password": "$2b$10$kJ3D4EfHhHhksSsSs8x7e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=46"
+    },
+    "phonenumber": "+33067890123"
+  },
+  {
+    "username": "marius.meyer",
+    "firstname": "Marius",
+    "lastname": "Meyer",
+    "email": "marius.meyer@example.com",
+    "password": "$2b$10$lK4E5FgIiIilTtTtTt9y8e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=47"
+    },
+    "phonenumber": "+33078901234"
+  },
+  {
+    "username": "rose.muller",
+    "firstname": "Rose",
+    "lastname": "Muller",
+    "email": "rose.muller@example.com",
+    "password": "$2b$10$mL5F6GhJjJjlmUuUuUu0z9e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=48"
+    },
+    "phonenumber": "+33089012345"
+  },
+  {
+    "username": "leo.meunier",
+    "firstname": "Léo",
+    "lastname": "Meunier",
+    "email": "leo.meunier@example.com",
+    "password": "$2b$10$nM6G7HiKkKkmnVvVvVv1a0e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=49"
+    },
+    "phonenumber": "+33090123456"
+  },
+  {
+    "username": "alice.boyer",
+    "firstname": "Alice",
+    "lastname": "Boyer",
+    "email": "alice.boyer@example.com",
+    "password": "$2b$10$oN7H8IjLlLlnnoWwWwWw2b1e",
+    "avatar": {
+      "url": "https://i.pravatar.cc/150?img=50"
+    },
+    "phonenumber": "+33101234567"
+  }
+]
