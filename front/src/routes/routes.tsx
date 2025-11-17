@@ -3,15 +3,15 @@ import App from "@/App";
 import ProductPage from "@/components/pages/ProductPage";
 
 export const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App />,
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/ProductPage/:id",
+    loader: async ({ params }) => {
+      return params.id;
     },
-    {
-        path: "/ProductPage/:id",
-        loader: async ({params}) => {
-            return params.id;
-        },
-        element: <ProductPage />
-    }
+    element: <ProductPage />,
+  },
 ]);

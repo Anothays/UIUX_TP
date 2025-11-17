@@ -13,7 +13,15 @@
     "portes": 5,
     "places": 5,
     "description": "Peugeot 208 récente, parfaite pour la ville. Équipements modernes et consommation réduite.",
-    "tags": ["citadine", "essence", "économique", "compact", "manuelle", "familiale"]
+    "tags": [
+      "citadine",
+      "essence",
+      "économique",
+      "compact",
+      "manuelle",
+      "familiale"
+    ],
+    "état": "occasion"
   },
   {
     "id": 2,
@@ -29,7 +37,15 @@
     "portes": 5,
     "places": 5,
     "description": "Renault Clio en excellent état, idéale pour un usage urbain quotidien.",
-    "tags": ["citadine", "essence", "économique", "compact", "manuelle", "familiale"]
+    "tags": [
+      "citadine",
+      "essence",
+      "économique",
+      "compact",
+      "manuelle",
+      "familiale"
+    ],
+    "état": "occasion"
   },
   {
     "id": 3,
@@ -45,7 +61,15 @@
     "portes": 5,
     "places": 5,
     "description": "Volkswagen Golf récente, confortable et spacieuse. Parfaite pour les longs trajets.",
-    "tags": ["compact", "diesel", "familiale", "automatique", "confort", "routière"]
+    "tags": [
+      "compact",
+      "diesel",
+      "familiale",
+      "automatique",
+      "confort",
+      "routière"
+    ],
+    "état": "occasion"
   },
   {
     "id": 4,
@@ -61,7 +85,16 @@
     "portes": 4,
     "places": 5,
     "description": "BMW Série 3 premium, sportive et élégante. Équipements haut de gamme.",
-    "tags": ["berline", "essence", "luxe", "sportive", "automatique", "premium", "routière"]
+    "tags": [
+      "berline",
+      "essence",
+      "luxe",
+      "sportive",
+      "automatique",
+      "premium",
+      "routière"
+    ],
+    "état": "occasion"
   },
   {
     "id": 5,
@@ -77,7 +110,15 @@
     "portes": 5,
     "places": 5,
     "description": "Mercedes Classe A récente, design moderne et technologies avancées.",
-    "tags": ["compact", "essence", "luxe", "automatique", "premium", "technologie"]
+    "tags": [
+      "compact",
+      "essence",
+      "luxe",
+      "automatique",
+      "premium",
+      "technologie"
+    ],
+    "état": "neuf"
   },
   {
     "id": 6,
@@ -93,7 +134,16 @@
     "portes": 4,
     "places": 5,
     "description": "Audi A4 spacieuse et confortable, parfaite pour les trajets professionnels.",
-    "tags": ["berline", "diesel", "luxe", "automatique", "premium", "routière", "confort"]
+    "tags": [
+      "berline",
+      "diesel",
+      "luxe",
+      "automatique",
+      "premium",
+      "routière",
+      "confort"
+    ],
+    "état": "occasion"
   },
   {
     "id": 7,
@@ -109,7 +159,16 @@
     "portes": 4,
     "places": 5,
     "description": "Tesla Model 3 électrique, technologie de pointe et autonomie élevée.",
-    "tags": ["berline", "électrique", "luxe", "automatique", "premium", "écologique", "technologie"]
+    "tags": [
+      "berline",
+      "électrique",
+      "luxe",
+      "automatique",
+      "premium",
+      "écologique",
+      "technologie"
+    ],
+    "état": "neuf"
   },
   {
     "id": 8,
@@ -125,7 +184,16 @@
     "portes": 5,
     "places": 5,
     "description": "Peugeot 3008 hybride, SUV spacieux et économique. Idéal pour les familles.",
-    "tags": ["SUV", "hybride", "familiale", "automatique", "spacieux", "écologique", "4x4"]
+    "tags": [
+      "SUV",
+      "hybride",
+      "familiale",
+      "automatique",
+      "spacieux",
+      "écologique",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 9,
@@ -141,7 +209,15 @@
     "portes": 5,
     "places": 5,
     "description": "Renault Captur, SUV compact et polyvalent. Parfait pour la ville et la route.",
-    "tags": ["SUV", "essence", "compact", "manuelle", "familiale", "polyvalent"]
+    "tags": [
+      "SUV",
+      "essence",
+      "compact",
+      "manuelle",
+      "familiale",
+      "polyvalent"
+    ],
+    "état": "occasion"
   },
   {
     "id": 10,
@@ -157,7 +233,15 @@
     "portes": 5,
     "places": 5,
     "description": "Citroën C3 économique et pratique, idéale pour un premier véhicule.",
-    "tags": ["citadine", "essence", "économique", "compact", "manuelle", "pratique"]
+    "tags": [
+      "citadine",
+      "essence",
+      "économique",
+      "compact",
+      "manuelle",
+      "pratique"
+    ],
+    "état": "occasion"
   },
   {
     "id": 11,
@@ -173,7 +257,15 @@
     "portes": 5,
     "places": 5,
     "description": "Ford Focus fiable et économique, parfaite pour les longs trajets.",
-    "tags": ["compact", "diesel", "économique", "manuelle", "familiale", "routière"]
+    "tags": [
+      "compact",
+      "diesel",
+      "économique",
+      "manuelle",
+      "familiale",
+      "routière"
+    ],
+    "état": "occasion"
   },
   {
     "id": 12,
@@ -189,7 +281,15 @@
     "portes": 5,
     "places": 5,
     "description": "Toyota Yaris hybride, très économique et écologique. Consommation réduite.",
-    "tags": ["citadine", "hybride", "économique", "automatique", "écologique", "familiale"]
+    "tags": [
+      "citadine",
+      "hybride",
+      "économique",
+      "automatique",
+      "écologique",
+      "familiale"
+    ],
+    "état": "neuf"
   },
   {
     "id": 13,
@@ -205,7 +305,15 @@
     "portes": 5,
     "places": 5,
     "description": "Nissan Qashqai, SUV compact et confortable. Excellent compromis.",
-    "tags": ["SUV", "essence", "compact", "manuelle", "familiale", "confort"]
+    "tags": [
+      "SUV",
+      "essence",
+      "compact",
+      "manuelle",
+      "familiale",
+      "confort"
+    ],
+    "état": "occasion"
   },
   {
     "id": 14,
@@ -221,7 +329,15 @@
     "portes": 5,
     "places": 5,
     "description": "Opel Corsa compacte et économique, parfaite pour la ville.",
-    "tags": ["citadine", "essence", "économique", "compact", "manuelle", "urbaine"]
+    "tags": [
+      "citadine",
+      "essence",
+      "économique",
+      "compact",
+      "manuelle",
+      "urbaine"
+    ],
+    "état": "occasion"
   },
   {
     "id": 15,
@@ -237,7 +353,16 @@
     "portes": 5,
     "places": 5,
     "description": "Volvo XC60 hybride rechargeable, luxe et sécurité. SUV premium.",
-    "tags": ["SUV", "hybride", "luxe", "automatique", "premium", "sécurité", "spacieux"]
+    "tags": [
+      "SUV",
+      "hybride",
+      "luxe",
+      "automatique",
+      "premium",
+      "sécurité",
+      "spacieux"
+    ],
+    "état": "occasion"
   },
   {
     "id": 16,
@@ -253,7 +378,15 @@
     "portes": 5,
     "places": 5,
     "description": "Seat Ibiza sportive et dynamique, idéale pour les jeunes conducteurs.",
-    "tags": ["citadine", "essence", "sportive", "compact", "manuelle", "dynamique"]
+    "tags": [
+      "citadine",
+      "essence",
+      "sportive",
+      "compact",
+      "manuelle",
+      "dynamique"
+    ],
+    "état": "occasion"
   },
   {
     "id": 17,
@@ -269,7 +402,16 @@
     "portes": 5,
     "places": 5,
     "description": "Skoda Octavia spacieuse et pratique, excellent rapport qualité-prix.",
-    "tags": ["berline", "diesel", "économique", "manuelle", "spacieux", "pratique", "routière"]
+    "tags": [
+      "berline",
+      "diesel",
+      "économique",
+      "manuelle",
+      "spacieux",
+      "pratique",
+      "routière"
+    ],
+    "état": "occasion"
   },
   {
     "id": 18,
@@ -285,7 +427,16 @@
     "portes": 5,
     "places": 5,
     "description": "Hyundai Tucson hybride, design moderne et technologies avancées.",
-    "tags": ["SUV", "hybride", "familiale", "automatique", "spacieux", "écologique", "technologie"]
+    "tags": [
+      "SUV",
+      "hybride",
+      "familiale",
+      "automatique",
+      "spacieux",
+      "écologique",
+      "technologie"
+    ],
+    "état": "neuf"
   },
   {
     "id": 19,
@@ -301,7 +452,16 @@
     "portes": 5,
     "places": 5,
     "description": "Kia Sportage, SUV robuste et fiable. Garantie longue durée.",
-    "tags": ["SUV", "essence", "familiale", "automatique", "spacieux", "fiable", "4x4"]
+    "tags": [
+      "SUV",
+      "essence",
+      "familiale",
+      "automatique",
+      "spacieux",
+      "fiable",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 20,
@@ -317,7 +477,16 @@
     "portes": 3,
     "places": 4,
     "description": "Fiat 500 électrique, design iconique et zéro émission. Parfaite pour la ville.",
-    "tags": ["citadine", "électrique", "économique", "automatique", "écologique", "urbaine", "design"]
+    "tags": [
+      "citadine",
+      "électrique",
+      "économique",
+      "automatique",
+      "écologique",
+      "urbaine",
+      "design"
+    ],
+    "état": "occasion"
   },
   {
     "id": 21,
@@ -333,7 +502,16 @@
     "portes": 5,
     "places": 5,
     "description": "Mazda CX-5, SUV élégant et performant. Design soigné.",
-    "tags": ["SUV", "diesel", "familiale", "automatique", "spacieux", "élégant", "4x4"]
+    "tags": [
+      "SUV",
+      "diesel",
+      "familiale",
+      "automatique",
+      "spacieux",
+      "élégant",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 22,
@@ -349,7 +527,16 @@
     "portes": 5,
     "places": 5,
     "description": "Dacia Sandero, la voiture la plus abordable. Simple et efficace.",
-    "tags": ["citadine", "essence", "économique", "compact", "manuelle", "abordable", "pratique"]
+    "tags": [
+      "citadine",
+      "essence",
+      "économique",
+      "compact",
+      "manuelle",
+      "abordable",
+      "pratique"
+    ],
+    "état": "occasion"
   },
   {
     "id": 23,
@@ -365,7 +552,16 @@
     "portes": 2,
     "places": 4,
     "description": "Porsche 911, sportive légendaire. Performance et prestige.",
-    "tags": ["sportive", "essence", "luxe", "automatique", "premium", "performance", "prestige"]
+    "tags": [
+      "sportive",
+      "essence",
+      "luxe",
+      "automatique",
+      "premium",
+      "performance",
+      "prestige"
+    ],
+    "état": "neuf"
   },
   {
     "id": 24,
@@ -381,7 +577,17 @@
     "portes": 5,
     "places": 5,
     "description": "Audi Q5 hybride rechargeable, luxe et performance. SUV premium.",
-    "tags": ["SUV", "hybride", "luxe", "automatique", "premium", "spacieux", "performance", "4x4"]
+    "tags": [
+      "SUV",
+      "hybride",
+      "luxe",
+      "automatique",
+      "premium",
+      "spacieux",
+      "performance",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 25,
@@ -397,7 +603,17 @@
     "portes": 5,
     "places": 5,
     "description": "BMW X3, SUV sportif et élégant. Confort et dynamisme.",
-    "tags": ["SUV", "diesel", "luxe", "automatique", "premium", "sportive", "spacieux", "4x4"]
+    "tags": [
+      "SUV",
+      "diesel",
+      "luxe",
+      "automatique",
+      "premium",
+      "sportive",
+      "spacieux",
+      "4x4"
+    ],
+    "état": "neuf"
   },
   {
     "id": 26,
@@ -413,7 +629,16 @@
     "portes": 4,
     "places": 5,
     "description": "Mercedes Classe C, berline premium et confortable. Élégance allemande.",
-    "tags": ["berline", "essence", "luxe", "automatique", "premium", "confort", "routière"]
+    "tags": [
+      "berline",
+      "essence",
+      "luxe",
+      "automatique",
+      "premium",
+      "confort",
+      "routière"
+    ],
+    "état": "occasion"
   },
   {
     "id": 27,
@@ -429,7 +654,17 @@
     "portes": 5,
     "places": 7,
     "description": "Tesla Model Y, SUV électrique spacieux. Technologie de pointe.",
-    "tags": ["SUV", "électrique", "luxe", "automatique", "premium", "spacieux", "écologique", "technologie"]
+    "tags": [
+      "SUV",
+      "électrique",
+      "luxe",
+      "automatique",
+      "premium",
+      "spacieux",
+      "écologique",
+      "technologie"
+    ],
+    "état": "neuf"
   },
   {
     "id": 28,
@@ -445,7 +680,16 @@
     "portes": 5,
     "places": 5,
     "description": "Renault Megane, compacte et économique. Fiable et pratique.",
-    "tags": ["compact", "diesel", "économique", "manuelle", "familiale", "pratique", "routière"]
+    "tags": [
+      "compact",
+      "diesel",
+      "économique",
+      "manuelle",
+      "familiale",
+      "pratique",
+      "routière"
+    ],
+    "état": "occasion"
   },
   {
     "id": 29,
@@ -461,7 +705,16 @@
     "portes": 5,
     "places": 7,
     "description": "Peugeot 5008, grand SUV 7 places. Idéal pour les grandes familles.",
-    "tags": ["SUV", "diesel", "familiale", "automatique", "spacieux", "7places", "4x4"]
+    "tags": [
+      "SUV",
+      "diesel",
+      "familiale",
+      "automatique",
+      "spacieux",
+      "7places",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 30,
@@ -477,7 +730,15 @@
     "portes": 5,
     "places": 5,
     "description": "Citroën C4, design moderne et confortable. Technologie avancée.",
-    "tags": ["compact", "essence", "familiale", "manuelle", "confort", "technologie"]
+    "tags": [
+      "compact",
+      "essence",
+      "familiale",
+      "manuelle",
+      "confort",
+      "technologie"
+    ],
+    "état": "neuf"
   },
   {
     "id": 31,
@@ -493,7 +754,16 @@
     "portes": 5,
     "places": 5,
     "description": "Volkswagen Tiguan, SUV polyvalent et fiable. Qualité allemande.",
-    "tags": ["SUV", "essence", "familiale", "automatique", "spacieux", "fiable", "4x4"]
+    "tags": [
+      "SUV",
+      "essence",
+      "familiale",
+      "automatique",
+      "spacieux",
+      "fiable",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 32,
@@ -509,7 +779,17 @@
     "portes": 5,
     "places": 5,
     "description": "Toyota RAV4 hybride, SUV fiable et économique. Consommation réduite.",
-    "tags": ["SUV", "hybride", "familiale", "automatique", "spacieux", "écologique", "fiable", "4x4"]
+    "tags": [
+      "SUV",
+      "hybride",
+      "familiale",
+      "automatique",
+      "spacieux",
+      "écologique",
+      "fiable",
+      "4x4"
+    ],
+    "état": "neuf"
   },
   {
     "id": 33,
@@ -525,7 +805,15 @@
     "portes": 5,
     "places": 5,
     "description": "Ford Puma, SUV compact et dynamique. Style moderne.",
-    "tags": ["SUV", "essence", "compact", "manuelle", "sportive", "dynamique"]
+    "tags": [
+      "SUV",
+      "essence",
+      "compact",
+      "manuelle",
+      "sportive",
+      "dynamique"
+    ],
+    "état": "occasion"
   },
   {
     "id": 34,
@@ -541,7 +829,15 @@
     "portes": 5,
     "places": 5,
     "description": "Nissan Leaf électrique, pionnière de l'électrique. Fiable et économique.",
-    "tags": ["compact", "électrique", "économique", "automatique", "écologique", "familiale"]
+    "tags": [
+      "compact",
+      "électrique",
+      "économique",
+      "automatique",
+      "écologique",
+      "familiale"
+    ],
+    "état": "neuf"
   },
   {
     "id": 35,
@@ -557,7 +853,16 @@
     "portes": 5,
     "places": 5,
     "description": "Opel Astra, compacte polyvalente. Bon rapport qualité-prix.",
-    "tags": ["compact", "diesel", "économique", "manuelle", "familiale", "polyvalent", "routière"]
+    "tags": [
+      "compact",
+      "diesel",
+      "économique",
+      "manuelle",
+      "familiale",
+      "polyvalent",
+      "routière"
+    ],
+    "état": "occasion"
   },
   {
     "id": 36,
@@ -573,7 +878,17 @@
     "portes": 5,
     "places": 5,
     "description": "Volvo XC40 électrique, SUV premium et écologique. Sécurité maximale.",
-    "tags": ["SUV", "électrique", "luxe", "automatique", "premium", "écologique", "sécurité", "spacieux"]
+    "tags": [
+      "SUV",
+      "électrique",
+      "luxe",
+      "automatique",
+      "premium",
+      "écologique",
+      "sécurité",
+      "spacieux"
+    ],
+    "état": "neuf"
   },
   {
     "id": 37,
@@ -589,7 +904,15 @@
     "portes": 5,
     "places": 5,
     "description": "Seat Leon, compacte sportive et dynamique. Style espagnol.",
-    "tags": ["compact", "essence", "sportive", "manuelle", "dynamique", "familiale"]
+    "tags": [
+      "compact",
+      "essence",
+      "sportive",
+      "manuelle",
+      "dynamique",
+      "familiale"
+    ],
+    "état": "occasion"
   },
   {
     "id": 38,
@@ -605,7 +928,17 @@
     "portes": 5,
     "places": 7,
     "description": "Skoda Kodiaq, grand SUV 7 places. Spacieux et pratique.",
-    "tags": ["SUV", "diesel", "familiale", "automatique", "spacieux", "7places", "pratique", "4x4"]
+    "tags": [
+      "SUV",
+      "diesel",
+      "familiale",
+      "automatique",
+      "spacieux",
+      "7places",
+      "pratique",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 39,
@@ -621,7 +954,16 @@
     "portes": 5,
     "places": 5,
     "description": "Hyundai Kona électrique, SUV compact et moderne. Autonomie élevée.",
-    "tags": ["SUV", "électrique", "compact", "automatique", "écologique", "technologie", "spacieux"]
+    "tags": [
+      "SUV",
+      "électrique",
+      "compact",
+      "automatique",
+      "écologique",
+      "technologie",
+      "spacieux"
+    ],
+    "état": "neuf"
   },
   {
     "id": 40,
@@ -637,7 +979,16 @@
     "portes": 5,
     "places": 5,
     "description": "Kia Niro hybride, SUV compact et économique. Garantie longue durée.",
-    "tags": ["SUV", "hybride", "compact", "automatique", "économique", "écologique", "fiable"]
+    "tags": [
+      "SUV",
+      "hybride",
+      "compact",
+      "automatique",
+      "économique",
+      "écologique",
+      "fiable"
+    ],
+    "état": "occasion"
   },
   {
     "id": 41,
@@ -653,7 +1004,16 @@
     "portes": 5,
     "places": 5,
     "description": "Fiat Panda, citadine économique et pratique. Idéale pour la ville.",
-    "tags": ["citadine", "essence", "économique", "compact", "manuelle", "pratique", "urbaine"]
+    "tags": [
+      "citadine",
+      "essence",
+      "économique",
+      "compact",
+      "manuelle",
+      "pratique",
+      "urbaine"
+    ],
+    "état": "occasion"
   },
   {
     "id": 42,
@@ -669,7 +1029,16 @@
     "portes": 2,
     "places": 2,
     "description": "Mazda MX-5, roadster sportif et fun. Conduite plaisir garantie.",
-    "tags": ["sportive", "essence", "sportive", "manuelle", "roadster", "plaisir", "performance"]
+    "tags": [
+      "sportive",
+      "essence",
+      "sportive",
+      "manuelle",
+      "roadster",
+      "plaisir",
+      "performance"
+    ],
+    "état": "neuf"
   },
   {
     "id": 43,
@@ -685,7 +1054,16 @@
     "portes": 5,
     "places": 5,
     "description": "Dacia Duster, SUV abordable et robuste. Parfait pour l'aventure.",
-    "tags": ["SUV", "diesel", "économique", "manuelle", "robuste", "abordable", "4x4"]
+    "tags": [
+      "SUV",
+      "diesel",
+      "économique",
+      "manuelle",
+      "robuste",
+      "abordable",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 44,
@@ -701,7 +1079,17 @@
     "portes": 5,
     "places": 5,
     "description": "Porsche Macan, SUV sportif premium. Performance et luxe.",
-    "tags": ["SUV", "essence", "luxe", "automatique", "premium", "sportive", "performance", "4x4"]
+    "tags": [
+      "SUV",
+      "essence",
+      "luxe",
+      "automatique",
+      "premium",
+      "sportive",
+      "performance",
+      "4x4"
+    ],
+    "état": "neuf"
   },
   {
     "id": 45,
@@ -717,7 +1105,16 @@
     "portes": 5,
     "places": 5,
     "description": "Audi A3, compacte premium et sportive. Qualité allemande.",
-    "tags": ["compact", "essence", "luxe", "automatique", "premium", "sportive", "familiale"]
+    "tags": [
+      "compact",
+      "essence",
+      "luxe",
+      "automatique",
+      "premium",
+      "sportive",
+      "familiale"
+    ],
+    "état": "occasion"
   },
   {
     "id": 46,
@@ -733,7 +1130,16 @@
     "portes": 5,
     "places": 5,
     "description": "BMW Série 1, compacte sportive et élégante. Dynamisme bavarois.",
-    "tags": ["compact", "essence", "luxe", "automatique", "premium", "sportive", "dynamique"]
+    "tags": [
+      "compact",
+      "essence",
+      "luxe",
+      "automatique",
+      "premium",
+      "sportive",
+      "dynamique"
+    ],
+    "état": "neuf"
   },
   {
     "id": 47,
@@ -749,7 +1155,17 @@
     "portes": 5,
     "places": 5,
     "description": "Mercedes GLA, SUV compact premium. Élégance et confort.",
-    "tags": ["SUV", "essence", "luxe", "automatique", "premium", "compact", "confort", "4x4"]
+    "tags": [
+      "SUV",
+      "essence",
+      "luxe",
+      "automatique",
+      "premium",
+      "compact",
+      "confort",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 48,
@@ -765,7 +1181,17 @@
     "portes": 4,
     "places": 5,
     "description": "Tesla Model S, berline électrique de luxe. Performance exceptionnelle.",
-    "tags": ["berline", "électrique", "luxe", "automatique", "premium", "performance", "technologie", "écologique"]
+    "tags": [
+      "berline",
+      "électrique",
+      "luxe",
+      "automatique",
+      "premium",
+      "performance",
+      "technologie",
+      "écologique"
+    ],
+    "état": "neuf"
   },
   {
     "id": 49,
@@ -781,7 +1207,16 @@
     "portes": 5,
     "places": 5,
     "description": "Renault Zoe électrique, citadine écologique. Autonomie adaptée à la ville.",
-    "tags": ["citadine", "électrique", "économique", "automatique", "écologique", "urbaine", "familiale"]
+    "tags": [
+      "citadine",
+      "électrique",
+      "économique",
+      "automatique",
+      "écologique",
+      "urbaine",
+      "familiale"
+    ],
+    "état": "neuf"
   },
   {
     "id": 50,
@@ -797,7 +1232,17 @@
     "portes": 5,
     "places": 5,
     "description": "Peugeot 508 hybride, berline premium et économique. Design élégant.",
-    "tags": ["berline", "hybride", "luxe", "automatique", "premium", "écologique", "routière", "confort"]
+    "tags": [
+      "berline",
+      "hybride",
+      "luxe",
+      "automatique",
+      "premium",
+      "écologique",
+      "routière",
+      "confort"
+    ],
+    "état": "occasion"
   },
   {
     "id": 51,
@@ -813,7 +1258,17 @@
     "portes": 5,
     "places": 5,
     "description": "Citroën C5 Aircross hybride, SUV confortable. Suspension hydraulique.",
-    "tags": ["SUV", "hybride", "familiale", "automatique", "spacieux", "confort", "écologique", "4x4"]
+    "tags": [
+      "SUV",
+      "hybride",
+      "familiale",
+      "automatique",
+      "spacieux",
+      "confort",
+      "écologique",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 52,
@@ -829,7 +1284,15 @@
     "portes": 5,
     "places": 5,
     "description": "Volkswagen ID.3 électrique, compacte moderne. Plateforme MEB.",
-    "tags": ["compact", "électrique", "familiale", "automatique", "écologique", "technologie"]
+    "tags": [
+      "compact",
+      "électrique",
+      "familiale",
+      "automatique",
+      "écologique",
+      "technologie"
+    ],
+    "état": "neuf"
   },
   {
     "id": 53,
@@ -845,7 +1308,16 @@
     "portes": 5,
     "places": 5,
     "description": "Toyota Corolla hybride, compacte fiable et économique. Qualité japonaise.",
-    "tags": ["compact", "hybride", "économique", "automatique", "écologique", "fiable", "familiale"]
+    "tags": [
+      "compact",
+      "hybride",
+      "économique",
+      "automatique",
+      "écologique",
+      "fiable",
+      "familiale"
+    ],
+    "état": "occasion"
   },
   {
     "id": 54,
@@ -861,7 +1333,16 @@
     "portes": 5,
     "places": 5,
     "description": "Nissan Micra, citadine compacte et économique. Fiable et pratique.",
-    "tags": ["citadine", "essence", "économique", "compact", "manuelle", "pratique", "urbaine"]
+    "tags": [
+      "citadine",
+      "essence",
+      "économique",
+      "compact",
+      "manuelle",
+      "pratique",
+      "urbaine"
+    ],
+    "état": "occasion"
   },
   {
     "id": 55,
@@ -877,7 +1358,15 @@
     "portes": 5,
     "places": 5,
     "description": "Opel Crossland, SUV compact et polyvalent. Idéal pour la ville.",
-    "tags": ["SUV", "essence", "compact", "manuelle", "familiale", "polyvalent"]
+    "tags": [
+      "SUV",
+      "essence",
+      "compact",
+      "manuelle",
+      "familiale",
+      "polyvalent"
+    ],
+    "état": "occasion"
   },
   {
     "id": 56,
@@ -893,7 +1382,17 @@
     "portes": 5,
     "places": 5,
     "description": "Volvo V60 hybride, break premium et spacieux. Sécurité maximale.",
-    "tags": ["break", "hybride", "luxe", "automatique", "premium", "spacieux", "sécurité", "écologique"]
+    "tags": [
+      "break",
+      "hybride",
+      "luxe",
+      "automatique",
+      "premium",
+      "spacieux",
+      "sécurité",
+      "écologique"
+    ],
+    "état": "occasion"
   },
   {
     "id": 57,
@@ -909,7 +1408,16 @@
     "portes": 5,
     "places": 5,
     "description": "Seat Ateca, SUV compact et sportif. Style dynamique.",
-    "tags": ["SUV", "diesel", "compact", "manuelle", "sportive", "dynamique", "4x4"]
+    "tags": [
+      "SUV",
+      "diesel",
+      "compact",
+      "manuelle",
+      "sportive",
+      "dynamique",
+      "4x4"
+    ],
+    "état": "occasion"
   },
   {
     "id": 58,
@@ -925,7 +1433,16 @@
     "portes": 5,
     "places": 5,
     "description": "Skoda Kamiq, SUV compact et pratique. Excellent rapport qualité-prix.",
-    "tags": ["SUV", "essence", "compact", "manuelle", "familiale", "pratique", "économique"]
+    "tags": [
+      "SUV",
+      "essence",
+      "compact",
+      "manuelle",
+      "familiale",
+      "pratique",
+      "économique"
+    ],
+    "état": "neuf"
   },
   {
     "id": 59,
@@ -941,7 +1458,16 @@
     "portes": 5,
     "places": 5,
     "description": "Hyundai i20, citadine moderne et fiable. Garantie longue durée.",
-    "tags": ["citadine", "essence", "économique", "compact", "manuelle", "fiable", "urbaine"]
+    "tags": [
+      "citadine",
+      "essence",
+      "économique",
+      "compact",
+      "manuelle",
+      "fiable",
+      "urbaine"
+    ],
+    "état": "occasion"
   },
   {
     "id": 60,
@@ -957,6 +1483,15 @@
     "portes": 5,
     "places": 5,
     "description": "Kia Ceed, compacte fiable et économique. Garantie 7 ans.",
-    "tags": ["compact", "diesel", "économique", "manuelle", "familiale", "fiable", "routière"]
+    "tags": [
+      "compact",
+      "diesel",
+      "économique",
+      "manuelle",
+      "familiale",
+      "fiable",
+      "routière"
+    ],
+    "état": "occasion"
   }
 ]
