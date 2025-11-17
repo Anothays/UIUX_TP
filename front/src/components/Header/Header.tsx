@@ -1,0 +1,39 @@
+import { Link } from "react-router";
+
+function Header() {
+  return (
+    <div className="navbar navbar-center bg-base-100 shadow-lg">
+      <div className="flex-1">
+        <Link to="/" className="btn btn-ghost text-xl">
+          Logo
+        </Link>
+      </div>
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1 gap-2">
+          <li>
+            <Link to="/occasion" className="btn btn-ghost">
+              Occasion
+            </Link>
+          </li>
+          <li>
+            <Link to="/neuf" className="btn btn-ghost">
+              Neuf
+            </Link>
+          </li>
+          <li>
+            <Link to="/vendre" className="btn btn-ghost">
+              Vendre
+            </Link>
+          </li>
+          <li>
+            <Link to="/profile" className="btn btn-ghost">
+              Mon profile
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export default Header;

@@ -1,16 +1,13 @@
-import type { Car } from '@/model/CarsTypes';
-import cars from '../../../../back/data/cars.json';
-import Card from '../UI/Card';
+import BestSells from "../BestSells/BestSells";
+import Hero from "../Hero/Hero";
+import Testimonials from "../Testimonials/Testimonials";
+
 export default function HomePage() {
-    return (
-        <div className='flex gap-10'>
-            {/* <p>HelloWorld</p> */}
-            <Card car={cars[0] as unknown as Car} />
-            <Card car={cars[0] as unknown as Car} />
-            <Card car={cars[0] as unknown as Car} />
-            
-
-
-        </div>
-    );
+  return (
+    <>
+      <Hero />
+      <BestSells />
+      <Testimonials />
+    </>
+  );
 }
