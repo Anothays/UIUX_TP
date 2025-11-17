@@ -1,5 +1,6 @@
 import "./style.css";
+import HomePage from "./components/pages/HomePage";
 
 export default function App() {
-  return <p>App</p>;
+    return <HomePage />;
 }
