@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react"
 import carData from "../../../../back/data/cars.json"
 import type { Car } from "@/model/CarsTypes"
+import { router } from "@/routes/routes";
 
 type BigCardProps = {
     car: Car;
 }
 export default function BigCard({car}: BigCardProps){
 
-
+    const goBuy = () => {
+       router.navigate("/PaymentPage", {state: car.prix});
+    }
 
     return (
         <div className="card card-side bg-base-100 shadow-sm m-10">
@@ -58,7 +61,12 @@ export default function BigCard({car}: BigCardProps){
                 </div>
 
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Acheter</button>
+                    <button 
+                        className="btn btn-primary"
+                        onClick={goBuy}
+                    >
+                        Acheter
+                    </button>
                 </div>
             </div>
         </div>
