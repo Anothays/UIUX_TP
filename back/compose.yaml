@@ -7,10 +7,11 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     env_file:
       - .env
-    command: >
-      sh -c "mongoimport --db uiux --collection user --file ./data/users.json
-      mongoimport --db uiux --collection car --file ./data/cars.json
-      "
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data
+      - ./data/init.js:/docker-entrypoint-initdb.d/init.js
 
   mongo-express:
     image: mongo-express
