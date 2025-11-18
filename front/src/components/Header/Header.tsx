@@ -11,13 +11,8 @@ function Header() {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1 gap-2">
           <li>
-            <Link to="/occasion" className="btn btn-ghost">
-              Occasion
-            </Link>
-          </li>
-          <li>
-            <Link to="/neuf" className="btn btn-ghost">
-              Neuf
+            <Link to="/productsPage" className="btn btn-ghost">
+              Voitures
             </Link>
           </li>
           <li>
@@ -28,6 +23,11 @@ function Header() {
           <li>
             <Link to="/profile" className="btn btn-ghost">
               Mon profile
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="btn btn-ghost">
+              Contact
             </Link>
           </li>
         </ul>
