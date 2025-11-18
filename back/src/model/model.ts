@@ -36,7 +36,6 @@ const carSchema = new mongoose.Schema({
     état: { type: String, enum: ["occasion", "neuve"], required: true },
 }, { timestamps: true });
 
-
 const car = db.model("car", carSchema, "car");
 const dbCar = db.collections["cars"];
 

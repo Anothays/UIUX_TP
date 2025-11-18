@@ -26,18 +26,3 @@ carRouter.post("/cars/:id", async (c) => {
 
     return c.json({ message: `Details of car with id: ${id}`, car: carDetails });
 });
-
-carRouter.post("/cars", async (c) => {
-    const carData = await c.req.json();
-    try {
-        const newCar = new car(carData);
-        await newCar.save();
-    } catch (error) {
-        return c.json({ message: "Error creating car", error }, 500);
-    }
-
-    return c.json({ message: "New car created" });
-});
-
-
-
