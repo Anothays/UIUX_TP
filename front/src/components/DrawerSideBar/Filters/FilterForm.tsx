@@ -1,16 +1,15 @@
+import { getCars } from "@/services/Car.service";
+import { useSearchParams } from "react-router";
 import { useFiltersForm, type FilterValues } from "./FiltersContext";
 
-type FilterFormProps = {
-  onFilterChange?: (filters: FilterValues) => void;
-};
-
-export default function FilterForm({ onFilterChange }: FilterFormProps) {
+export default function FilterForm() {
   const { filters, setFilters } = useFiltersForm();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const handleChange = (field: keyof FilterValues, value: string) => {
-    const newFilters = { ...filters, [field]: value };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    const newFilters = { ...filters, [name]: value };
     setFilters(newFilters);
-    onFilterChange?.(newFilters);
   };
 
   const handleReset = () => {
@@ -33,14 +32,23 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
       état: "",
     };
     setFilters(resetFilters);
-    onFilterChange?.(resetFilters);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const params = new URLSearchParams();
+    Object.entries(filters).forEach((entrie) => {
+      params.set(entrie[0], entrie[1]);
+    });
+    setSearchParams(params);
+    getCars();
   };
 
   return (
-    <form className="menu bg-base-200 min-h-full w-80 p-4">
+    <form onSubmit={handleSubmit} className="menu bg-base-200 min-h-full w-80 p-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Filtres</h2>
-        <button onClick={handleReset} className="btn btn-sm btn-ghost">
+        <button type="button" onClick={handleReset} className="btn btn-sm btn-ghost">
           Réinitialiser
         </button>
       </div>
@@ -53,10 +61,11 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
           </label>
           <input
             type="text"
+            name="marque"
             placeholder="Ex: Peugeot, Renault..."
             className="input w-full"
             value={filters.marque}
-            onChange={(e) => handleChange("marque", e.target.value)}
+            onChange={handleChange}
           />
         </div>
 
@@ -67,10 +76,11 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
           </label>
           <input
             type="text"
+            name="modele"
             placeholder="Ex: 208, Clio..."
             className="input w-full"
             value={filters.modele}
-            onChange={(e) => handleChange("modele", e.target.value)}
+            onChange={handleChange}
           />
         </div>
 
@@ -82,17 +92,19 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
           <div className="flex gap-2">
             <input
               type="number"
+              name="anneeMin"
               placeholder="Min"
               className="input w-full"
               value={filters.anneeMin}
-              onChange={(e) => handleChange("anneeMin", e.target.value)}
+              onChange={handleChange}
             />
             <input
               type="number"
+              name="anneeMax"
               placeholder="Max"
               className="input w-full"
               value={filters.anneeMax}
-              onChange={(e) => handleChange("anneeMax", e.target.value)}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -105,17 +117,19 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
           <div className="flex gap-2">
             <input
               type="number"
+              name="prixMin"
               placeholder="Min"
               className="input w-full"
               value={filters.prixMin}
-              onChange={(e) => handleChange("prixMin", e.target.value)}
+              onChange={handleChange}
             />
             <input
               type="number"
+              name="prixMax"
               placeholder="Max"
               className="input w-full"
               value={filters.prixMax}
-              onChange={(e) => handleChange("prixMax", e.target.value)}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -125,11 +139,7 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
           <label className="label">
             <span className="label-text">État</span>
           </label>
-          <select
-            className="select select-bordered w-full"
-            value={filters.état}
-            onChange={(e) => handleChange("état", e.target.value)}
-          >
+          <select name="état" className="select select-bordered w-full" value={filters.état} onChange={handleChange}>
             <option value="">Tous</option>
             <option value="neuve">Neuve</option>
             <option value="occasion">Occasion</option>
@@ -143,10 +153,11 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
           </label>
           <input
             type="text"
+            name="couleur"
             placeholder="Ex: Bleu, Rouge..."
             className="input w-full"
             value={filters.couleur}
-            onChange={(e) => handleChange("couleur", e.target.value)}
+            onChange={handleChange}
           />
         </div>
 
@@ -158,17 +169,19 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
           <div className="flex gap-2">
             <input
               type="number"
+              name="kilometrageMin"
               placeholder="Min"
               className="input w-full"
               value={filters.kilometrageMin}
-              onChange={(e) => handleChange("kilometrageMin", e.target.value)}
+              onChange={handleChange}
             />
             <input
               type="number"
+              name="kilometrageMax"
               placeholder="Max"
               className="input w-full"
               value={filters.kilometrageMax}
-              onChange={(e) => handleChange("kilometrageMax", e.target.value)}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -179,9 +192,10 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
             <span className="label-text">Carburant</span>
           </label>
           <select
+            name="carburant"
             className="select select-bordered w-full"
             value={filters.carburant}
-            onChange={(e) => handleChange("carburant", e.target.value)}
+            onChange={handleChange}
           >
             <option value="">Tous</option>
             <option value="essence">Essence</option>
@@ -199,17 +213,19 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
           <div className="flex gap-2">
             <input
               type="number"
+              name="puissanceMin"
               placeholder="Min"
               className="input w-full"
               value={filters.puissanceMin}
-              onChange={(e) => handleChange("puissanceMin", e.target.value)}
+              onChange={handleChange}
             />
             <input
               type="number"
+              name="puissanceMax"
               placeholder="Max"
               className="input w-full"
               value={filters.puissanceMax}
-              onChange={(e) => handleChange("puissanceMax", e.target.value)}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -219,11 +235,7 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
           <label className="label">
             <span className="label-text">Boîte de vitesses</span>
           </label>
-          <select
-            className="select select-bordered w-full"
-            value={filters.boite}
-            onChange={(e) => handleChange("boite", e.target.value)}
-          >
+          <select name="boite" className="select select-bordered w-full" value={filters.boite} onChange={handleChange}>
             <option value="">Toutes</option>
             <option value="manuelle">Manuelle</option>
             <option value="automatique">Automatique</option>
@@ -236,9 +248,10 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
             <span className="label-text">Nombre de portes</span>
           </label>
           <select
+            name="portes"
             className="select select-bordered w-full"
             value={filters.portes}
-            onChange={(e) => handleChange("portes", e.target.value)}
+            onChange={handleChange}
           >
             <option value="">Tous</option>
             <option value="3">3 portes</option>
@@ -252,9 +265,10 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
             <span className="label-text">Nombre de places</span>
           </label>
           <select
+            name="places"
             className="select select-bordered w-full"
             value={filters.places}
-            onChange={(e) => handleChange("places", e.target.value)}
+            onChange={handleChange}
           >
             <option value="">Toutes</option>
             <option value="2">2 places</option>
@@ -264,7 +278,9 @@ export default function FilterForm({ onFilterChange }: FilterFormProps) {
           </select>
         </div>
 
-        <button className="btn btn-primary w-full">Filtrer</button>
+        <button type="submit" className="btn btn-primary w-full">
+          Filtrer
+        </button>
       </div>
     </form>
   );
