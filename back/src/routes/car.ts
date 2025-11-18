@@ -8,7 +8,6 @@ carRouter.get("/cars", async (c) => {
 
         const query: any = {};
 
-        // ----- Filtres textuels (search inclusif) -----
         const textFields = [
             "marque",
             "modele",
@@ -25,7 +24,6 @@ carRouter.get("/cars", async (c) => {
             }
         }
 
-        // ----- Filtres numériques MIN/MAX -----
         const rangeFields = [
             { paramMin: "anneeMin", paramMax: "anneeMax", field: "annee" },
             { paramMin: "prixMin", paramMax: "prixMax", field: "prix" },
@@ -44,7 +42,6 @@ carRouter.get("/cars", async (c) => {
             }
         }
 
-        // ----- Filtres numériques exacts -----
         if (params.portes) query.portes = Number(params.portes);
         if (params.places) query.places = Number(params.places);
 
