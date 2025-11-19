@@ -18,6 +18,13 @@ export async function getCar(id: string) {
     return cars as ApiResponseSingle<Car>;
 }
 
+export async function getSimilarCars(id: string) {
+    const data = await fetch(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/cars/${id}/similar`);
+    if (!data.ok) throw new Error('Erreur lors de la récupération des voitures similaires');
+    const cars = await data.json();
+    return cars as ApiResponse<Car>;
+}
+
 export function setUrlRequestParams(url: URL, params?: Record<string, string>) {
     if (!params) return url;
     Object.entries(params).forEach((param) => {

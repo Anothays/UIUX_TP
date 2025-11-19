@@ -27,7 +27,7 @@ export default function ProductPage() {
         <div>  
             <BigCard car={car}/>
             <Description text={car.description} />
-            <SimilarProduct />
+            <SimilarProduct id={car._id} />
             <Footer />
         </div>
     )

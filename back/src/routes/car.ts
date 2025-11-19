@@ -60,3 +60,24 @@ carRouter.get("/cars/:id", async (c) => {
 
     return c.json({ message: `Details of car with id: ${id}`, data: carDetails });
 });
+
+carRouter.get("/cars/:id/similar", async (c) => {
+    const id = String(c.req.param('id'));
+    const carDetails = await car.findOne({ _id: id });
+
+    if (!carDetails) {
+        return c.json({ message: "Car not found" }, 404);
+    }
+
+    let similarCars;
+    try {
+        similarCars = await car.find({
+            _id: { $ne: id },
+            marque: carDetails.marque,
+        }).limit(5);
+    } catch (error) {
+        return c.json({ message: "Error fetching similar cars", error }, 500);
+    }
+
+    return c.json({ message: `Similar cars to car with id: ${id}`, data: similarCars });
+});
