@@ -1,4 +1,4 @@
-import { Hono } from 'hono'
+import { Hono } from 'hono';
 import { car } from '../model/model.js';
 export const carRouter = new Hono()
 
@@ -45,7 +45,7 @@ carRouter.get("/cars", async (c) => {
         return c.json({ message: "Error fetching cars", error }, 500);
     }
 
-    return c.json({ message: "List of cars", cars });
+    return c.json({ message: "List of cars", data: cars });
 });
 
 carRouter.post("/cars/:id", async (c) => {
@@ -56,7 +56,7 @@ carRouter.post("/cars/:id", async (c) => {
     } catch (error) {
         return c.json({ message: "Error fetching car details", error }, 500);
     }
-     
 
-    return c.json({ message: `Details of car with id: ${id}`, car: carDetails });
+
+    return c.json({ message: `Details of car with id: ${id}`, data: carDetails });
 });
