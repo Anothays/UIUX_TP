@@ -1,28 +1,28 @@
 import type { FilterValues } from "@/components/DrawerSideBar/Filters/FiltersContext";
-import type { ApiResponse } from "@/model/ApiResponse";
+import type { ApiResponse, ApiResponseSingle } from "@/model/ApiResponse";
 import type { Car } from "@/model/CarsTypes";
 
 export async function getCars(params?: FilterValues) {
-  const url = new URL(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/cars`);
-  setUrlRequestParams(url, params);
-  const data = await fetch(url);
-  if (!data.ok) throw new Error('Erreur lors de la récupération des voitures');
-  const jsonData = await data.json();
-  return jsonData as ApiResponse<Car>;
+    const url = new URL(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/cars`);
+    setUrlRequestParams(url, params);
+    const data = await fetch(url);
+    if (!data.ok) throw new Error('Erreur lors de la récupération des voitures');
+    const jsonData = await data.json();
+    return jsonData as ApiResponse<Car>;
 }
 
-export async function getCar(id: number) {
-  const data = await fetch(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/cars/${id}`);
-  if (!data.ok) throw new Error('Erreur lors de la récupération de la voiture');
-  const cars = await data.json();
-  return cars;
+export async function getCar(id: string) {
+    const data = await fetch(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/cars/${id}`);
+    if (!data.ok) throw new Error('Erreur lors de la récupération de la voiture');
+    const cars = await data.json();
+    return cars as ApiResponseSingle<Car>;
 }
 
 export function setUrlRequestParams(url: URL, params?: Record<string, string>) {
-  if (!params) return url;
-  Object.entries(params).forEach((param) => {
-    url.searchParams.set(param[0], param[1]);
-  });
-  return url;
+    if (!params) return url;
+    Object.entries(params).forEach((param) => {
+        url.searchParams.set(param[0], param[1]);
+    });
+    return url;
 }
 
