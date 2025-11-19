@@ -6,12 +6,12 @@ import Header from "../Header/Header";
 
 export default function ProductsPage() {
   return (
-    <CarsProvider>
-      <FilterFormsProvider>
+    <FilterFormsProvider>
+      <CarsProvider>
         <Header />
         <DrawerSideBar />
         <Footer />
-      </FilterFormsProvider>
-    </CarsProvider>
+      </CarsProvider>
+    </FilterFormsProvider>
   );
 }

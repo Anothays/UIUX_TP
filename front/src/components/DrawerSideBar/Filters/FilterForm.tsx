@@ -1,12 +1,9 @@
-import { useCars } from "@/contexts/CarsContext";
-import { getCars } from "@/services/Car.service";
 import { useSearchParams } from "react-router";
 import { useFiltersForm, type FilterValues } from "./FiltersContext";
 
 export default function FilterForm() {
   const { filters, setFilters } = useFiltersForm();
   const [, setSearchParams] = useSearchParams();
-  const { setCars, setCarsAreLoading } = useCars();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -14,7 +11,7 @@ export default function FilterForm() {
     setFilters(newFilters);
   };
 
-  const handleReset = async () => {
+  const handleReset = () => {
     const resetFilters: FilterValues = {
       marque: "",
       modele: "",
@@ -34,22 +31,25 @@ export default function FilterForm() {
       état: "",
     };
     setFilters(resetFilters);
-    const cars = await getCars();
-    setCars(cars.data);
+    setSearchParams({ page: "1", limit: "10" });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    setCarsAreLoading(true);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const params = new URLSearchParams();
-    Object.entries(filters).forEach((entrie) => {
-      params.set(entrie[0], entrie[1]);
+
+    // Ajouter seulement les filtres non vides
+    Object.entries(filters).forEach(([key, value]) => {
+      if (value && value !== "") {
+        params.set(key, value);
+      }
     });
+
+    // Ajouter la pagination par défaut
+    params.set("page", "1");
+    params.set("limit", "10");
+
     setSearchParams(params);
-    const filteredCars = await getCars({ ...filters });
-    setCars(filteredCars.data);
-    setCarsAreLoading(false);
-    console.log("filteredCars => ", filteredCars);
   };
 
   return (

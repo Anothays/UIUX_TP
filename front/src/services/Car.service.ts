@@ -2,7 +2,7 @@ import type { FilterValues } from "@/components/DrawerSideBar/Filters/FiltersCon
 import type { ApiResponse } from "@/model/ApiResponse";
 import type { Car } from "@/model/CarsTypes";
 
-export async function getCars(params?: FilterValues) {
+export async function getCars(params?: (FilterValues & { page?: string; limit?: string }) | Record<string, string>) {
   const url = new URL(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/cars`);
   setUrlRequestParams(url, params);
   const data = await fetch(url);
