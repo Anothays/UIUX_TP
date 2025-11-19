@@ -5,7 +5,7 @@ type AlertProps = {
 
 export default function Alert({ type, message }: AlertProps) {
   return (
-    <div role="alert" className={`alert alert-${type} alert-soft `}>
+    <div role="alert" className={`alert alert-${type} alert-soft`}>
       <span>{message}</span>
     </div>
   );

@@ -24,7 +24,7 @@ export default function DrawerSideBar() {
       <input id="my-drawer-1" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         {carsAreLoading ? (
-          <div className="opacity-50 bg-gray-200 h-full">
+          <div className="opacity-50 bg-gray-300 h-full">
             <Loader />
           </div>
         ) : (
