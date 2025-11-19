@@ -1,3 +1,4 @@
+import { useCars } from "@/contexts/CarsContext";
 import { getCars } from "@/services/Car.service";
 import { useSearchParams } from "react-router";
 import { useFiltersForm, type FilterValues } from "./FiltersContext";
@@ -5,6 +6,7 @@ import { useFiltersForm, type FilterValues } from "./FiltersContext";
 export default function FilterForm() {
   const { filters, setFilters } = useFiltersForm();
   const [, setSearchParams] = useSearchParams();
+  const { setCars, setCarsAreLoading } = useCars();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -12,7 +14,7 @@ export default function FilterForm() {
     setFilters(newFilters);
   };
 
-  const handleReset = () => {
+  const handleReset = async () => {
     const resetFilters: FilterValues = {
       marque: "",
       modele: "",
@@ -32,16 +34,22 @@ export default function FilterForm() {
       état: "",
     };
     setFilters(resetFilters);
+    const cars = await getCars();
+    setCars(cars.data);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    setCarsAreLoading(true);
     e.preventDefault();
     const params = new URLSearchParams();
     Object.entries(filters).forEach((entrie) => {
       params.set(entrie[0], entrie[1]);
     });
     setSearchParams(params);
-    getCars({ ...filters });
+    const filteredCars = await getCars({ ...filters });
+    setCars(filteredCars.data);
+    setCarsAreLoading(false);
+    console.log("filteredCars => ", filteredCars);
   };
 
   return (

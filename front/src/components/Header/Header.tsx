@@ -11,6 +11,11 @@ function Header() {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1 gap-2">
           <li>
+            <Link to="/discover" className="btn btn-ghost">
+              Je recherche un véhicule
+            </Link>
+          </li>
+          <li>
             <Link to="/productsPage" className="btn btn-ghost">
               Voitures
             </Link>
