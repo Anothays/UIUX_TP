@@ -1,5 +1,7 @@
 import { Hono } from 'hono';
 import { car } from '../model/model.js';
+import { listSimilarCars } from '../utils/similar.js';
+import type { Car } from '../../../front/src/model/CarsTypes.js';
 export const carRouter = new Hono()
 
 carRouter.get("/cars", async (c) => {
@@ -71,10 +73,15 @@ carRouter.get("/cars/:id/similar", async (c) => {
 
     let similarCars;
     try {
-        similarCars = await car.find({
-            _id: { $ne: id },
-            marque: carDetails.marque,
-        }).limit(5);
+        const allCars = await car.find();
+        const similarCarsIds = listSimilarCars(carDetails as unknown as Car, allCars as unknown as Car[])
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 11)
+            .map(item => String(item._id))
+            .filter(id => id !== String(carDetails._id))
+
+       
+        similarCars = await car.find({ _id: { $in: similarCarsIds } });
     } catch (error) {
         return c.json({ message: "Error fetching similar cars", error }, 500);
     }
