@@ -1,20 +1,22 @@
-import { useEffect, useState } from "react"
-import carData from "../../../../back/data/cars.json"
+
 import type { Car } from "@/model/CarsTypes"
+import { router } from "@/routes/routes";
 
 type BigCardProps = {
     car: Car;
 }
 export default function BigCard({car}: BigCardProps){
 
-
+    const goBuy = () => {
+       router.navigate("/PaymentPage", {state: car.prix});
+    }
 
     return (
         <div className="card card-side bg-base-100 shadow-sm m-10">
             <figure className="w-md">
                 <img
-                src="https://projetcartylion.fr/wp-content/uploads/2020/08/Placeholder.png"
-                alt="Movie" />
+                src={car.image}
+                alt={`${car.marque} ${car.modele}`} />
             </figure>
             <div className="card-body">
                 <h1 className="card-title text-[30px]">{car.marque} {car.modele}</h1>
@@ -58,7 +60,12 @@ export default function BigCard({car}: BigCardProps){
                 </div>
 
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Acheter</button>
+                    <button 
+                        className="btn btn-primary"
+                        onClick={goBuy}
+                    >
+                        Acheter
+                    </button>
                 </div>
             </div>
         </div>
