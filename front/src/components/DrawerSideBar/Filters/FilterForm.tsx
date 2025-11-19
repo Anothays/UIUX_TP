@@ -1,4 +1,3 @@
-import { getCars } from "@/services/Car.service";
 import { useSearchParams } from "react-router";
 import { useFiltersForm, type FilterValues } from "./FiltersContext";
 
@@ -32,16 +31,25 @@ export default function FilterForm() {
       état: "",
     };
     setFilters(resetFilters);
+    setSearchParams({ page: "1", limit: "10" });
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const params = new URLSearchParams();
-    Object.entries(filters).forEach((entrie) => {
-      params.set(entrie[0], entrie[1]);
+
+    // Ajouter seulement les filtres non vides
+    Object.entries(filters).forEach(([key, value]) => {
+      if (value && value !== "") {
+        params.set(key, value);
+      }
     });
+
+    // Ajouter la pagination par défaut
+    params.set("page", "1");
+    params.set("limit", "10");
+
     setSearchParams(params);
-    getCars({ ...filters });
   };
 
   return (

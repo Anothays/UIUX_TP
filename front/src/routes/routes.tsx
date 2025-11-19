@@ -14,6 +14,10 @@ export const router = createBrowserRouter([
     element: <ProductsPage />,
   },
   {
+    path: "/discover",
+    element: <p>discover</p>,
+  },
+  {
     path: "/ProductPage/:id",
     loader: async ({ params }) => {
       return params.id;
