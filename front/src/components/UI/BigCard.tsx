@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-import carData from "../../../../back/data/cars.json"
+
 import type { Car } from "@/model/CarsTypes"
 import { router } from "@/routes/routes";
 
@@ -16,8 +15,8 @@ export default function BigCard({car}: BigCardProps){
         <div className="card card-side bg-base-100 shadow-sm m-10">
             <figure className="w-md">
                 <img
-                src="https://projetcartylion.fr/wp-content/uploads/2020/08/Placeholder.png"
-                alt="Movie" />
+                src={car.image}
+                alt={`${car.marque} ${car.modele}`} />
             </figure>
             <div className="card-body">
                 <h1 className="card-title text-[30px]">{car.marque} {car.modele}</h1>

@@ -1,4 +1,5 @@
 export type Car = {
+    _id: string;
     id: string;
     marque: string;
     modele: string;
@@ -14,5 +15,5 @@ export type Car = {
     description: string;
     tags: string[];
     image: string;
-    état: string;
+    état: "occasion" | "neuve";
 }

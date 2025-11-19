@@ -1,26 +1,26 @@
 import type { Car } from "@/model/CarsTypes";
+import { router } from "@/routes/routes";
 type CardProps = {
     car: Car | null;
-}
-
+};
 
 export default function Card({ car }: CardProps) {
-
+    const goToProductPage = () => {
+        router.navigate(`/ProductPage/${car?._id}`);
+    };
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
+        <div className="card bg-base-100 flex-1 shadow-sm">
             <figure>
-                <img
-                src={"https://projetcartylion.fr/wp-content/uploads/2020/08/Placeholder.png"}
-                alt={car?.modele} />
+                <img src={car?.image} alt={car?.modele} />
             </figure>
             <div className="card-body">
-                <h2 className="card-title">{car?.modele ?? "Unknown Model"}</h2>
-                <p>{car?.description ?? "No description available"}</p>
+                <h2 className="card-title">{car?.modele ?? "Pas d'information sur le modèle"}</h2>
+                <p>{car?.description ?? "Pas de description"}</p>
                 <p>Price: {car?.prix ?? "N/A"}€</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="btn btn-primary" onClick={goToProductPage}>Buy Now</button>
                 </div>
             </div>
         </div>
-    )
+    );
 }
