@@ -1,17 +1,17 @@
 import type { Car } from "../../../front/src/model/CarsTypes.js";
 function similariteVoiture(v1: Car, v2: Car): number {
     const poids = {
-        marque: 25,
-        modele: 25,
-        prix: 10,
-        couleur: 5,
-        kilometrage: 10,
-        carburant: 10,
+        marque: 7,
+        modele: 7,
+        prix: 17,
+        couleur: 3,
+        kilometrage: 6,
+        carburant: 4,
         puissance: 5,
-        boite: 10,
+        boite: 7,
         portes: 3,
         places: 3,
-        tags: 5,
+        tags: 4,
         état: 5
     };
 
