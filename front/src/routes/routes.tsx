@@ -1,5 +1,6 @@
 import App from "@/App";
 import ProductPage from "@/components/pages/ProductPage";
+import PaymentPage from "@/components/pages/PaymentPage";	
 import ProductsPage from "@/components/pages/ProductsPage";
 import { createBrowserRouter } from "react-router";
 
@@ -19,4 +20,8 @@ export const router = createBrowserRouter([
     },
     element: <ProductPage />,
   },
+  {
+		path: "/PaymentPage",
+		element: <PaymentPage />,
+	},
 ]);
