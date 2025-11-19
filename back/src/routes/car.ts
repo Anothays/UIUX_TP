@@ -48,11 +48,11 @@ carRouter.get("/cars", async (c) => {
     return c.json({ message: "List of cars", data: cars });
 });
 
-carRouter.post("/cars/:id", async (c) => {
-    const { id } = c.req.param();
+carRouter.get("/cars/:id", async (c) => {
+    const id = String(c.req.param('id'));
     let carDetails;
     try {
-        carDetails = await car.findOne({ id });
+        carDetails = await car.findOne({ _id: id });
     } catch (error) {
         return c.json({ message: "Error fetching car details", error }, 500);
     }
