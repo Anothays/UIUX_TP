@@ -1,8 +1,7 @@
-import { createBrowserRouter } from "react-router";
 import App from "@/App";
 import ProductPage from "@/components/pages/ProductPage";
-import Store from "@/components/pages/Store";
 import ProductsPage from "@/components/pages/ProductsPage";
+import { createBrowserRouter } from "react-router";
 
 export const router = createBrowserRouter([
   {
@@ -19,9 +18,5 @@ export const router = createBrowserRouter([
       return params.id;
     },
     element: <ProductPage />,
-  },
-  {
-    path: "/Store",
-    element: <Store />,
   },
 ]);

@@ -4,7 +4,7 @@ import { useFiltersForm, type FilterValues } from "./FiltersContext";
 
 export default function FilterForm() {
   const { filters, setFilters } = useFiltersForm();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [, setSearchParams] = useSearchParams();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -41,7 +41,7 @@ export default function FilterForm() {
       params.set(entrie[0], entrie[1]);
     });
     setSearchParams(params);
-    getCars();
+    getCars({ ...filters });
   };
 
   return (
