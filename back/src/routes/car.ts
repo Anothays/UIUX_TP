@@ -47,7 +47,7 @@ carRouter.get("/cars", async (c) => {
 
 
         const cars = await car.find(query);
-        return c.json({ message: "List of cars", cars });
+        return c.json({ message: "List of cars", data: cars });
     } catch (error) {
         console.log("Error fetching cars:", error);
         return c.json({ message: "Error fetching cars", error }, 500);
