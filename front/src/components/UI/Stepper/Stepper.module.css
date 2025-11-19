@@ -1,0 +1,7 @@
+.step::before {
+  transition: all 500ms ease;
+}
+
+.step::after {
+  transition: all 500ms ease;
+}

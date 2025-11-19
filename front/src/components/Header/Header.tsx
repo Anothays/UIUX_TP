@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 function Header() {
   return (
-    <div className="navbar navbar-center bg-base-100 shadow-lg">
+    <div className="navbar navbar-center bg-base-100 shadow-lg ">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost text-xl">
           Logo

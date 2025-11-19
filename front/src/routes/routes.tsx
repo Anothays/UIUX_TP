@@ -1,6 +1,7 @@
 import App from "@/App";
+import DiscoverPage from "@/components/pages/DiscoverPage/DiscoverPage";
+import PaymentPage from "@/components/pages/PaymentPage";
 import ProductPage from "@/components/pages/ProductPage";
-import PaymentPage from "@/components/pages/PaymentPage";	
 import ProductsPage from "@/components/pages/ProductsPage";
 import { createBrowserRouter } from "react-router";
 
@@ -15,7 +16,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/discover",
-    element: <p>discover</p>,
+    element: <DiscoverPage />,
   },
   {
     path: "/ProductPage/:id",
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
     element: <ProductPage />,
   },
   {
-		path: "/PaymentPage",
-		element: <PaymentPage />,
-	},
+    path: "/PaymentPage",
+    element: <PaymentPage />,
+  },
 ]);
