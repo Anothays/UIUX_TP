@@ -1,17 +1,41 @@
 import { useCars } from "@/contexts/CarsContext";
 import { useEffect } from "react";
-import { useLocation, useSearchParams } from "react-router";
+import { useSearchParams } from "react-router";
 import { useFiltersForm, type FilterValues } from "./FiltersContext";
 
 export default function FilterForm() {
   const { filters, setFilters } = useFiltersForm();
   const [searchParams, setSearchParams] = useSearchParams();
-  const location = useLocation();
   const { paginationSettings } = useCars();
 
+  /**
+   * export type FilterValues = {
+  marque: string;
+  modele: string;
+  anneeMin: string;
+  anneeMax: string;
+  prixMin: string;
+  prixMax: string;
+  couleur: string;
+  kilometrageMin: string;
+  kilometrageMax: string;
+  carburant: string;
+  puissanceMin: string;
+  puissanceMax: string;
+  boite: string;
+  portes: string;
+  places: string;
+  état: string;
+};
+   */
+
   useEffect(() => {
-    console.log("paginationSettings", paginationSettings);
-  }, [paginationSettings]);
+    console.log("searchParams ==> ", searchParams);
+    const params = Object.fromEntries(searchParams.entries());
+    console.log("PARAMS RECEIVED ==> ", params);
+
+    setFilters(params as FilterValues);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;

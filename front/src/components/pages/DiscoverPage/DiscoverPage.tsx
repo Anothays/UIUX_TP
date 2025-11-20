@@ -35,30 +35,35 @@ export default function DiscoverPage() {
   const [step, setStep] = useState(0);
   const [params, setParams] = useState<paramsType>(initValue);
   const navigate = useNavigate();
+  const ALL_OPTION_STRING = "Peu importe";
 
   useEffect(() => {
     if (step !== 8) return;
+    console.log("PARAMS TO SEND ==> ", params);
     const timer = setTimeout(() => {
       const searchParams = new URLSearchParams();
       Object.entries(params).forEach(([key, value]) => {
-        if (value && value !== "") searchParams.append(key, value);
+        if (value === ALL_OPTION_STRING) {
+          searchParams.append(key, "");
+        } else {
+          searchParams.append(key, value.toLowerCase());
+        }
       });
       const url = `/ProductsPage?${searchParams.toString()}`;
       navigate(url);
     }, 3000);
     return () => clearTimeout(timer);
-  }, [step, params, navigate]);
+  }, [step, params, navigate, ALL_OPTION_STRING]);
 
   const handleType = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const value = e.currentTarget.value;
-    setParams({ ...params, type: value === "Peu importe" ? "" : value });
+    setParams({ ...params, type: value === ALL_OPTION_STRING ? "" : value });
     goNext();
   };
 
   const handleEtat = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const value = e.currentTarget.value;
-
-    setParams({ ...params, état: value === "Peu importe" ? "" : value });
+    setParams({ ...params, état: value === ALL_OPTION_STRING ? "" : value });
     goNext();
   };
 
@@ -66,23 +71,26 @@ export default function DiscoverPage() {
     const value = e.currentTarget.value;
     let prixMin = "";
     let prixMax = "";
-
-    // Extraire les nombres de la chaîne (supprimer les espaces et caractères non numériques sauf les tirets)
-    const numbers = value.match(/\d+/g)?.map(Number) || [];
-
-    if (value === "Peu importe" ? "" : value) {
+    if (value === "" || value === ALL_OPTION_STRING) {
       prixMin = "";
       prixMax = "";
-    } else if (value.includes("Moins de")) {
-      // "Moins de 10 000 €" -> prixMax = 10000
-      prixMax = numbers[0]?.toString() || "";
-    } else if (value.includes("Plus de")) {
-      // "Plus de 50 000 €" -> prixMin = 50000
-      prixMin = numbers[0]?.toString() || "";
-    } else if (numbers.length >= 2) {
-      // "10 000 - 20 000 €" -> prixMin = 10000, prixMax = 20000
-      prixMin = numbers[0]?.toString() || "";
-      prixMax = numbers[1]?.toString() || "";
+    } else {
+      const parts = value.split("_");
+      if (parts.length === 2) {
+        // Partie gauche (prixMin)
+        if (parts[0] === "-" || parts[0] === "") {
+          prixMin = "";
+        } else {
+          const minValue = parseInt(parts[0], 10);
+          prixMin = isNaN(minValue) || minValue < 0 ? "" : minValue.toString();
+        }
+        if (parts[1] === "-" || parts[1] === "") {
+          prixMax = "";
+        } else {
+          const maxValue = parseInt(parts[1], 10);
+          prixMax = isNaN(maxValue) || maxValue < 0 ? "" : maxValue.toString();
+        }
+      }
     }
 
     setParams({ ...params, prixMin, prixMax });
@@ -91,31 +99,31 @@ export default function DiscoverPage() {
 
   const handleCarburant = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const value = e.currentTarget.value;
-    setParams({ ...params, carburant: value === "Peu importe" ? "" : value });
+    setParams({ ...params, carburant: value === ALL_OPTION_STRING ? "" : value });
     goNext();
   };
 
   const handleBoite = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const value = e.currentTarget.value;
-    setParams({ ...params, boite: value === "Peu importe" ? "" : value });
+    setParams({ ...params, boite: value === ALL_OPTION_STRING ? "" : value });
     goNext();
   };
 
   const handlePlaces = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const value = e.currentTarget.value;
-    setParams({ ...params, places: value === "Peu importe" ? "" : value });
+    setParams({ ...params, places: value === ALL_OPTION_STRING ? "" : value });
     goNext();
   };
 
   const handlePortes = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const value = e.currentTarget.value;
-    setParams({ ...params, portes: value === "Peu importe" ? "" : value });
+    setParams({ ...params, portes: value === ALL_OPTION_STRING ? "" : value });
     goNext();
   };
 
   const handleMarque = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const value = e.currentTarget.value;
-    setParams({ ...params, marque: value === "Peu importe" ? "" : value });
+    setParams({ ...params, marque: value === ALL_OPTION_STRING ? "" : value });
     goNext();
   };
 
@@ -130,14 +138,14 @@ export default function DiscoverPage() {
       <div className={`container mx-auto w-full ${styles.step} ${step === 0 ? "visible" : "hidden"}`}>
         <h2 className={`${styles.title}`}>Quel type de véhicule recherchez-vous ?</h2>
         <div className="px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          <AnswerButton onClick={handleType} label="Citadine" />
-          <AnswerButton onClick={handleType} label="Compacte" />
-          <AnswerButton onClick={handleType} label="Berline" />
-          <AnswerButton onClick={handleType} label="SUV" />
-          <AnswerButton onClick={handleType} label="Break" />
-          <AnswerButton onClick={handleType} label="Sportive" />
-          <AnswerButton onClick={handleType} label="Utilitaire" />
-          <AnswerButton onClick={handleType} label="Peu importe" />
+          <AnswerButton onClick={handleType} label="Citadine" value={"citadine"} />
+          <AnswerButton onClick={handleType} label="Compacte" value={"compacte"} />
+          <AnswerButton onClick={handleType} label="Berline" value={"berline"} />
+          <AnswerButton onClick={handleType} label="SUV" value={"suv"} />
+          <AnswerButton onClick={handleType} label="Break" value={"break"} />
+          <AnswerButton onClick={handleType} label="Sportive" value={"sportive"} />
+          <AnswerButton onClick={handleType} label="Utilitaire" value={"utilitaire"} />
+          <AnswerButton onClick={handleType} label={ALL_OPTION_STRING} value={""} />
         </div>
       </div>
       <div
@@ -145,11 +153,11 @@ export default function DiscoverPage() {
           step === 1 ? "visible" : "hidden"
         }`}
       >
-        <h2 className={`${styles.title}`}>Souhaitez-vous un véhicule neuf ou d'occasion ?</h2>
+        <h2 className={`${styles.title}`}>Souhaitez-vous une voiture neuve ou d'occasion ?</h2>
         <div className="px-20 grid grid-cols-3 gap-4">
-          <AnswerButton onClick={handleEtat} label="Neuf" />
-          <AnswerButton onClick={handleEtat} label="Occasion" />
-          <AnswerButton onClick={handleEtat} label="Peu importe" />
+          <AnswerButton onClick={handleEtat} label="Neuve" value={"neuve"} />
+          <AnswerButton onClick={handleEtat} label="Occasion" value={"occasion"} />
+          <AnswerButton onClick={handleEtat} label={ALL_OPTION_STRING} value={""} />
         </div>
       </div>
       <div
@@ -159,12 +167,12 @@ export default function DiscoverPage() {
       >
         <h2 className={`${styles.title}`}>Quel est votre budget ?</h2>
         <div className="px-20 grid grid-cols-3 gap-4">
-          <AnswerButton onClick={handleBudget} label="Moins de 10 000 €" />
-          <AnswerButton onClick={handleBudget} label="10 000 - 20 000 €" />
-          <AnswerButton onClick={handleBudget} label="20 000 - 30 000 €" />
-          <AnswerButton onClick={handleBudget} label="30 000 - 50 000 €" />
-          <AnswerButton onClick={handleBudget} label="Plus de 50 000 €" />
-          <AnswerButton onClick={handleBudget} label="Peu importe" />
+          <AnswerButton onClick={handleBudget} label="Moins de 10000 €" value={"-_10000"} />
+          <AnswerButton onClick={handleBudget} label="10000 - 20000 €" value={"10000_20000"} />
+          <AnswerButton onClick={handleBudget} label="20000 - 30000 €" value={"20000_30000"} />
+          <AnswerButton onClick={handleBudget} label="30000 - 50000 €" value={"30000_40000"} />
+          <AnswerButton onClick={handleBudget} label="Plus de 50000 €" value={"50000_-"} />
+          <AnswerButton onClick={handleBudget} label={ALL_OPTION_STRING} value={""} />
         </div>
       </div>
       <div
@@ -174,11 +182,11 @@ export default function DiscoverPage() {
       >
         <h2 className={`${styles.title}`}>Quel type de carburant préférez-vous ?</h2>
         <div className="px-20 grid grid-cols-3 gap-4">
-          <AnswerButton onClick={handleCarburant} label="Essence" />
-          <AnswerButton onClick={handleCarburant} label="Diesel" />
-          <AnswerButton onClick={handleCarburant} label="Électrique" />
-          <AnswerButton onClick={handleCarburant} label="Hybride" />
-          <AnswerButton onClick={handleCarburant} label="Peu importe" />
+          <AnswerButton onClick={handleCarburant} label="Essence" value={"essence"} />
+          <AnswerButton onClick={handleCarburant} label="Diesel" value={"diesel"} />
+          <AnswerButton onClick={handleCarburant} label="Électrique" value={"electrique"} />
+          <AnswerButton onClick={handleCarburant} label="Hybride" value={"hybride"} />
+          <AnswerButton onClick={handleCarburant} label={ALL_OPTION_STRING} value={""} />
         </div>
       </div>
       <div
@@ -188,9 +196,9 @@ export default function DiscoverPage() {
       >
         <h2 className={`${styles.title}`}>Préférez-vous une boîte manuelle ou automatique ?</h2>
         <div className="px-20 grid grid-cols-3 gap-4">
-          <AnswerButton onClick={handleBoite} label="Manuelle" />
-          <AnswerButton onClick={handleBoite} label="Automatique" />
-          <AnswerButton onClick={handleBoite} label="Peu importe" />
+          <AnswerButton onClick={handleBoite} label="Manuelle" value={"manuelle"} />
+          <AnswerButton onClick={handleBoite} label="Automatique" value={"automatique"} />
+          <AnswerButton onClick={handleBoite} label={ALL_OPTION_STRING} value={""} />
         </div>
       </div>
       <div
@@ -200,11 +208,11 @@ export default function DiscoverPage() {
       >
         <h2 className={`${styles.title}`}>De combien de places avez-vous besoin ?</h2>
         <div className="px-20 grid grid-cols-3 gap-4">
-          <AnswerButton onClick={handlePlaces} label="2" />
-          <AnswerButton onClick={handlePlaces} label="4" />
-          <AnswerButton onClick={handlePlaces} label="5" />
-          <AnswerButton onClick={handlePlaces} label="7" />
-          <AnswerButton onClick={handlePlaces} label="Peu importe" />
+          <AnswerButton onClick={handlePlaces} label="2" value={"2"} />
+          <AnswerButton onClick={handlePlaces} label="4" value={"4"} />
+          <AnswerButton onClick={handlePlaces} label="5" value={"5"} />
+          <AnswerButton onClick={handlePlaces} label="7" value={"7"} />
+          <AnswerButton onClick={handlePlaces} label={ALL_OPTION_STRING} value={""} />
         </div>
       </div>
       <div
@@ -214,9 +222,9 @@ export default function DiscoverPage() {
       >
         <h2 className={`${styles.title}`}>Préférez-vous 3 ou 5 portes ?</h2>
         <div className="px-20 grid grid-cols-3 gap-4">
-          <AnswerButton onClick={handlePortes} label="3" />
-          <AnswerButton onClick={handlePortes} label="5" />
-          <AnswerButton onClick={handlePortes} label="Peu importe" />
+          <AnswerButton onClick={handlePortes} label="3" value={"3"} />
+          <AnswerButton onClick={handlePortes} label="5" value={"5"} />
+          <AnswerButton onClick={handlePortes} label={ALL_OPTION_STRING} value={""} />
         </div>
       </div>
       <div
@@ -226,9 +234,21 @@ export default function DiscoverPage() {
       >
         <h2 className={`${styles.title}`}>Recherchez-vous une certaine marque ?</h2>
         <div className="px-20 grid grid-cols-3 gap-4">
-          <AnswerButton onClick={handleMarque} label="Peugeot" />
-          <AnswerButton onClick={handleMarque} label="Renault" />
-          <AnswerButton onClick={handleMarque} label="Peu importe" />
+          <AnswerButton onClick={handleMarque} label="Peugeot" value={"peugeot"} />
+          <AnswerButton onClick={handleMarque} label="Renault" value={"renault"} />
+          <AnswerButton onClick={handleMarque} label="Citröen" value={"citroen"} />
+          <AnswerButton onClick={handleMarque} label="audi" value={"audi"} />
+          <AnswerButton onClick={handleMarque} label="mazda" value={"mazda"} />
+          <AnswerButton onClick={handleMarque} label="BMW" value={"bmw"} />
+          <AnswerButton onClick={handleMarque} label="Mercedes" value={"mercedes"} />
+          <AnswerButton onClick={handleMarque} label="Volkswagen" value={"volkswagen"} />
+          <AnswerButton onClick={handleMarque} label="Toyota" value={"toyota"} />
+          <AnswerButton onClick={handleMarque} label="Nissan" value={"nissan"} />
+          <AnswerButton onClick={handleMarque} label="Ford" value={"ford"} />
+          <AnswerButton onClick={handleMarque} label="Fiat" value={"fiat"} />
+          <AnswerButton onClick={handleMarque} label="Opel" value={"opel"} />
+          <AnswerButton onClick={handleMarque} label="Dacia" value={"dacia"} />
+          <AnswerButton onClick={handleMarque} label={ALL_OPTION_STRING} value={""} />
         </div>
       </div>
       <div
