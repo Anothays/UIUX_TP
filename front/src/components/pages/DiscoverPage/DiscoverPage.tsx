@@ -77,14 +77,13 @@ export default function DiscoverPage() {
     } else {
       const parts = value.split("_");
       if (parts.length === 2) {
-        // Partie gauche (prixMin)
-        if (parts[0] === "-" || parts[0] === "") {
+        if (parts[0] === "-" || parts[0] === "" || parts[0] == "0") {
           prixMin = "";
         } else {
           const minValue = parseInt(parts[0], 10);
           prixMin = isNaN(minValue) || minValue < 0 ? "" : minValue.toString();
         }
-        if (parts[1] === "-" || parts[1] === "") {
+        if (parts[1] === "-" || parts[1] === "" || parts[1] == "0") {
           prixMax = "";
         } else {
           const maxValue = parseInt(parts[1], 10);
