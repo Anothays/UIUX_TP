@@ -31,11 +31,12 @@ const initValue: paramsType = {
   type: "",
 };
 
+export const ALL_OPTION_STRING = "Peu importe";
+
 export default function DiscoverPage() {
   const [step, setStep] = useState(0);
   const [params, setParams] = useState<paramsType>(initValue);
   const navigate = useNavigate();
-  const ALL_OPTION_STRING = "Peu importe";
 
   useEffect(() => {
     if (step !== 8) return;
@@ -153,7 +154,7 @@ export default function DiscoverPage() {
         }`}
       >
         <h2 className={`${styles.title}`}>Souhaitez-vous une voiture neuve ou d'occasion ?</h2>
-        <div className="px-20 grid grid-cols-3 gap-4">
+        <div className="px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           <AnswerButton onClick={handleEtat} label="Neuve" value={"neuve"} />
           <AnswerButton onClick={handleEtat} label="Occasion" value={"occasion"} />
           <AnswerButton onClick={handleEtat} label={ALL_OPTION_STRING} value={""} />
@@ -165,7 +166,7 @@ export default function DiscoverPage() {
         }`}
       >
         <h2 className={`${styles.title}`}>Quel est votre budget ?</h2>
-        <div className="px-20 grid grid-cols-3 gap-4">
+        <div className="px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           <AnswerButton onClick={handleBudget} label="Moins de 10000 €" value={"-_10000"} />
           <AnswerButton onClick={handleBudget} label="10000 - 20000 €" value={"10000_20000"} />
           <AnswerButton onClick={handleBudget} label="20000 - 30000 €" value={"20000_30000"} />
@@ -180,7 +181,7 @@ export default function DiscoverPage() {
         }`}
       >
         <h2 className={`${styles.title}`}>Quel type de carburant préférez-vous ?</h2>
-        <div className="px-20 grid grid-cols-3 gap-4">
+        <div className="px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           <AnswerButton onClick={handleCarburant} label="Essence" value={"essence"} />
           <AnswerButton onClick={handleCarburant} label="Diesel" value={"diesel"} />
           <AnswerButton onClick={handleCarburant} label="Électrique" value={"electrique"} />
@@ -194,7 +195,7 @@ export default function DiscoverPage() {
         }`}
       >
         <h2 className={`${styles.title}`}>Préférez-vous une boîte manuelle ou automatique ?</h2>
-        <div className="px-20 grid grid-cols-3 gap-4">
+        <div className="px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           <AnswerButton onClick={handleBoite} label="Manuelle" value={"manuelle"} />
           <AnswerButton onClick={handleBoite} label="Automatique" value={"automatique"} />
           <AnswerButton onClick={handleBoite} label={ALL_OPTION_STRING} value={""} />
@@ -206,7 +207,7 @@ export default function DiscoverPage() {
         }`}
       >
         <h2 className={`${styles.title}`}>De combien de places avez-vous besoin ?</h2>
-        <div className="px-20 grid grid-cols-3 gap-4">
+        <div className="px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           <AnswerButton onClick={handlePlaces} label="2" value={"2"} />
           <AnswerButton onClick={handlePlaces} label="4" value={"4"} />
           <AnswerButton onClick={handlePlaces} label="5" value={"5"} />
@@ -220,7 +221,7 @@ export default function DiscoverPage() {
         }`}
       >
         <h2 className={`${styles.title}`}>Préférez-vous 3 ou 5 portes ?</h2>
-        <div className="px-20 grid grid-cols-3 gap-4">
+        <div className="px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           <AnswerButton onClick={handlePortes} label="3" value={"3"} />
           <AnswerButton onClick={handlePortes} label="5" value={"5"} />
           <AnswerButton onClick={handlePortes} label={ALL_OPTION_STRING} value={""} />
@@ -232,7 +233,7 @@ export default function DiscoverPage() {
         }`}
       >
         <h2 className={`${styles.title}`}>Recherchez-vous une certaine marque ?</h2>
-        <div className="px-20 grid grid-cols-3 gap-4">
+        <div className="px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           <AnswerButton onClick={handleMarque} label="Peugeot" value={"peugeot"} />
           <AnswerButton onClick={handleMarque} label="Renault" value={"renault"} />
           <AnswerButton onClick={handleMarque} label="Citröen" value={"citroen"} />
@@ -256,7 +257,7 @@ export default function DiscoverPage() {
         }`}
       >
         <h2 className={`${styles.title}`}>Nous recherchons votre véhicule...</h2>
-        <div className="px-20 grid grid-cols-3 gap-4">
+        <div className="px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           <Loader />
         </div>
       </div>

@@ -9,11 +9,11 @@ export default function Card({ car }: CardProps) {
     router.navigate(`/ProductPage/${car?._id}`);
   };
   return (
-    <div className="card bg-base-100 flex-1 shadow-sm">
+    <div className="card bg-base-100 flex-1 shadow-2xs rounded-2xl">
       <figure>
         <img src={car?.image} alt={car?.modele} />
       </figure>
-      <div className="card-body shadow-2xl">
+      <div className="card-body shadow-2xl rounded-2xl">
         <h2 className="card-title">
           {car?.marque} - {car?.modele ?? "Pas d'information sur le modèle"}
         </h2>
