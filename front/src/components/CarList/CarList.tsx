@@ -7,7 +7,7 @@ export default function CarList({ carsList }: { carsList?: Car[] }) {
 
   if (carsList.length === 0)
     return (
-      <div className="flex justify-center items-center w-full h-full">
+      <div className="flex justify-center items-center w-full pt-50">
         <Alert message="Aucun véhicule de correspond à vos critères" type="info" />
       </div>
     );

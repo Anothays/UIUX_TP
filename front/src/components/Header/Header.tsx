@@ -5,7 +5,7 @@ function Header() {
     <div className="navbar navbar-center bg-base-100 shadow-lg ">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost text-xl">
-          Logo
+          CarsDirectory
         </Link>
       </div>
       <div className="flex-none">
@@ -17,16 +17,16 @@ function Header() {
           </li>
           <li>
             <Link to="/productsPage" className="btn btn-ghost">
-              Voitures
+              Voitures à vendre
             </Link>
           </li>
           <li>
-            <Link to="/vendre" className="btn btn-ghost">
-              Vendre
+            <Link to="/sell" className="btn btn-ghost">
+              Vendre votre voiture
             </Link>
           </li>
           <li>
-            <Link to="/profile" className="btn btn-ghost">
+            <Link to="/profil" className="btn btn-ghost">
               Mon profile
             </Link>
           </li>
