@@ -51,7 +51,6 @@ export default function DiscoverPage() {
 
   const handleType = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const value = e.currentTarget.value;
-    console.log("TYPE ==> ", value);
     setParams({ ...params, type: value === "Peu importe" ? "" : value });
     goNext();
   };

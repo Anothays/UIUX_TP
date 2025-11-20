@@ -60,20 +60,12 @@ export default function DrawerSideBar() {
   };
 
   useEffect(() => {
-    // Récupérer les paramètres de l'URL
     const params: { [key: string]: string } = {};
     searchParams.forEach((value, key) => {
       params[key] = value;
     });
-
-    // Si pas de page dans l'URL, utiliser la page 1 par défaut
-    if (!params.page) {
-      params.page = "1";
-    }
-    if (!params.limit) {
-      params.limit = "10";
-    }
-
+    if (!params.page) params.page = "1";
+    if (!params.limit) params.limit = "10";
     fetchCars(params);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.search]);
@@ -88,8 +80,8 @@ export default function DrawerSideBar() {
           </div>
         ) : (
           <div>
-            <CarList carsList={cars} />
             {paginationSettings && <Pagination {...paginationSettings} handleClick={handlePageClick} />}
+            <CarList carsList={cars} />
           </div>
         )}
       </div>

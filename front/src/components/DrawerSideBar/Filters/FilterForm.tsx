@@ -1,9 +1,12 @@
-import { useSearchParams } from "react-router";
+import { useCars } from "@/contexts/CarsContext";
+import { useLocation, useSearchParams } from "react-router";
 import { useFiltersForm, type FilterValues } from "./FiltersContext";
 
 export default function FilterForm() {
   const { filters, setFilters } = useFiltersForm();
-  const [, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
+  const { cars } = useCars();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -55,7 +58,14 @@ export default function FilterForm() {
   return (
     <form onSubmit={handleSubmit} className="menu bg-base-200 min-h-full w-80 p-4">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold">Filtres</h2>
+        <h2 className="text-xl font-bold">
+          Filtres
+          {cars.length > 0 ? (
+            <span className="badge badge-soft badge-primary ml-1 px-1">
+              {cars.length} résultat{cars.length > 1 ? "s" : ""}
+            </span>
+          ) : null}
+        </h2>
         <button type="button" onClick={handleReset} className="btn btn-sm btn-ghost">
           Réinitialiser
         </button>

@@ -6,10 +6,10 @@ export type PaginationType = {
 };
 
 export default function Pagination({ currentPage, totalPages, handleClick }: PaginationType) {
-  if (!currentPage || !totalPages) return <></>;
+  if (!currentPage || !totalPages || totalPages === 1) return <></>;
 
   return (
-    <div className="justify-center w-full text-center p-15">
+    <div className="justify-center w-full text-center pt-10">
       {Array.from({ length: totalPages! }, (_, i) => (
         <button
           onClick={(e) => handleClick(e)}
@@ -21,11 +21,6 @@ export default function Pagination({ currentPage, totalPages, handleClick }: Pag
           {i + 1}
         </button>
       ))}
-      {/* <button className="join-item btn-xs btn">1</button>
-      <button className="join-item btn-xs btn">2</button>
-      <button className="join-item btn-xs btn btn-disabled">...</button>
-      <button className="join-item btn-xs btn">99</button>
-      <button className="join-item btn-xs btn">100</button> */}
     </div>
   );
 }
