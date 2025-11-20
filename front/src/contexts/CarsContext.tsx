@@ -5,6 +5,7 @@ type PaginationSettings = {
   currentPage: number;
   itemsPerPage: number;
   totalPages: number;
+  totalItems: number;
 };
 
 type CarsContextType = {

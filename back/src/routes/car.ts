@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
+import type { Car } from '../../../front/src/model/CarsTypes.js';
 import { car } from '../model/model.js';
 import { listSimilarCars } from '../utils/similar.js';
-import type { Car } from '../../../front/src/model/CarsTypes.js';
 export const carRouter = new Hono()
 
 carRouter.get("/cars", async (c) => {
@@ -26,7 +26,8 @@ carRouter.get("/cars", async (c) => {
             pagination: {
                 currentPage: pagination.page,
                 itemsPerPage: pagination.limit,
-                totalPages: totalPages
+                totalPages: totalPages,
+                totalItems: total,
             }
         });
 
@@ -47,6 +48,32 @@ carRouter.get("/cars/:id", async (c) => {
 
 
     return c.json({ message: `Details of car with id: ${id}`, data: carDetails });
+});
+
+carRouter.get("/cars/:id/similar", async (c) => {
+    const id = String(c.req.param('id'));
+    const carDetails = await car.findOne({ _id: id });
+
+    if (!carDetails) {
+        return c.json({ message: "Car not found" }, 404);
+    }
+
+    let similarCars;
+    try {
+        const allCars = await car.find();
+        const similarCarsIds = listSimilarCars(carDetails as unknown as Car, allCars as unknown as Car[])
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 11)
+            .map(item => String(item._id))
+            .filter(id => id !== String(carDetails._id))
+
+
+        similarCars = await car.find({ _id: { $in: similarCarsIds } });
+    } catch (error) {
+        return c.json({ message: "Error fetching similar cars", error }, 500);
+    }
+
+    return c.json({ message: `Similar cars to car with id: ${id}`, data: similarCars });
 });
 
 function sanitizeQueryParams(params: Record<string, string>) {
@@ -112,28 +139,4 @@ function handleRequestParams(params: Record<string, string>) {
     };
 }
 
-carRouter.get("/cars/:id/similar", async (c) => {
-    const id = String(c.req.param('id'));
-    const carDetails = await car.findOne({ _id: id });
 
-    if (!carDetails) {
-        return c.json({ message: "Car not found" }, 404);
-    }
-
-    let similarCars;
-    try {
-        const allCars = await car.find();
-        const similarCarsIds = listSimilarCars(carDetails as unknown as Car, allCars as unknown as Car[])
-            .sort((a, b) => b.score - a.score)
-            .slice(0, 11)
-            .map(item => String(item._id))
-            .filter(id => id !== String(carDetails._id))
-
-       
-        similarCars = await car.find({ _id: { $in: similarCarsIds } });
-    } catch (error) {
-        return c.json({ message: "Error fetching similar cars", error }, 500);
-    }
-
-    return c.json({ message: `Similar cars to car with id: ${id}`, data: similarCars });
-});

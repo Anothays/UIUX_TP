@@ -1,4 +1,5 @@
 import { useCars } from "@/contexts/CarsContext";
+import { useEffect } from "react";
 import { useLocation, useSearchParams } from "react-router";
 import { useFiltersForm, type FilterValues } from "./FiltersContext";
 
@@ -6,7 +7,11 @@ export default function FilterForm() {
   const { filters, setFilters } = useFiltersForm();
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
-  const { cars } = useCars();
+  const { paginationSettings } = useCars();
+
+  useEffect(() => {
+    console.log("paginationSettings", paginationSettings);
+  }, [paginationSettings]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -60,10 +65,12 @@ export default function FilterForm() {
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">
           Filtres
-          {cars.length > 0 ? (
-            <span className="badge badge-soft badge-primary ml-1 px-1">
-              {cars.length} résultat{cars.length > 1 ? "s" : ""}
-            </span>
+          {paginationSettings ? (
+            paginationSettings?.totalItems > 0 ? (
+              <span className="badge badge-soft badge-primary ml-1 px-1">
+                {paginationSettings?.totalItems} résultat{paginationSettings?.totalItems > 1 ? "s" : ""}
+              </span>
+            ) : null
           ) : null}
         </h2>
         <button type="button" onClick={handleReset} className="btn btn-sm btn-ghost">

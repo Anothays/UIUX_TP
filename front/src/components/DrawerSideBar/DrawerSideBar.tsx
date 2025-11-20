@@ -20,6 +20,7 @@ export default function DrawerSideBar() {
         currentPage: data.pagination.currentPage,
         itemsPerPage: data.pagination.itemsPerPage,
         totalPages: data.pagination.totalPages,
+        totalItems: data.pagination.totalItems,
       });
     }
   };

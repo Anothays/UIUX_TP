@@ -3,12 +3,12 @@ import type { ApiResponse, ApiResponseSingle } from "@/model/ApiResponse";
 import type { Car } from "@/model/CarsTypes";
 
 export async function getCars(params?: (FilterValues & { page?: string; limit?: string }) | Record<string, string>) {
-  const url = new URL(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/cars`);
-  setUrlRequestParams(url, params);
-  const data = await fetch(url);
-  if (!data.ok) throw new Error('Erreur lors de la récupération des voitures');
-  const jsonData = await data.json();
-  return jsonData as ApiResponse<Car>;
+    const url = new URL(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/cars`);
+    setUrlRequestParams(url, params);
+    const data = await fetch(url);
+    if (!data.ok) throw new Error('Erreur lors de la récupération des voitures');
+    const jsonData = await data.json();
+    return jsonData as ApiResponse<Car>;
 }
 
 export async function getCar(id: string) {
