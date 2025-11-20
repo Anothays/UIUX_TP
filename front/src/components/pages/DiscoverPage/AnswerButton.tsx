@@ -1,6 +1,6 @@
 type AnswerCardProps = {
   label: string;
-  onClick?: (e) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 
 export default function AnswerButton({ label, onClick }: AnswerCardProps) {
