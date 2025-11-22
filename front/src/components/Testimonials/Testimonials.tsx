@@ -35,13 +35,13 @@ const data = [
 
 export default function Testimonials() {
   return (
-    <>
-      <h2 className="mb-5 text-3xl text-center font-bold pt-5">Ils nous ont fait confiance</h2>
+    <div className="py-10">
+      <h2 className="mb-5 text-3xl text-center font-bold py-5">Ils nous ont fait confiance</h2>
       <div className="flex flex-row  gap-6 justify-center items-stretch">
         {data.map((testimonial, idx) => (
           <Testimonial key={idx} {...testimonial} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
